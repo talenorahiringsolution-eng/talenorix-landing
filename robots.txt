@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# OpenAI / ChatGPT Search
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+# Sitemap
+Sitemap: https://talenorix.com/sitemap.xml
