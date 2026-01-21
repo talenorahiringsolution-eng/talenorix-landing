@@ -1,0 +1,809 @@
+<!-- candidate-profile.html --> 
+ <!doctype html> 
+ <html lang="es"> 
+  <head> <meta charset="utf-8" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+    <title>Talenorix · Completar tu perfil</title> 
+    <link rel="stylesheet" href="/web/css/candidate-information.css" /> 
+    <!--script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+    <script defer src="/web/supabaseClient.js"></script>
+    <script defer src="/web/auth/candidate-information.js"></script>
+    <script defer src="/web/auth/candidate-logout.js"></script-->
+
+
+  </head>
+  <body> 
+      <header class="app-header"> 
+        <div class="header-left"> 
+          <div class="logo-square" aria-hidden="true"> </div> 
+          <div class="brand"> 
+            <div class="brand-title">Talenorix Hiring Solutions</div> 
+            <div class="brand-subtitle">Candidato</div>
+          </div> 
+        </div>
+
+<div class="header-center">
+  <div class="header-title" id="header_title">Talenorix Hiring Solutions · Perfil ·</div>
+</div>
+
+<div class="header-right">
+  <button class="btn btn-ghost" id="btn_logout" type="button">Logout</button>
+</div>
+
+</header> <div class="app-shell"> <aside class="sidebar" id="sidebar"> <div class="sidebar-top"> <button class="sidebar-toggle btn btn-ghost" id="btn_sidebar_toggle" type="button" aria-label="Abrir/cerrar menú"> ☰ </button> </div>
+      <nav class="sidebar-nav">
+        <a class="nav-item" href="/web/auth/candidate-dashboard.html" data-nav="dashboard">🏠 Dashboard</a>
+        <a class="nav-item active" href="/web/auth/candidate-information.html" data-nav="profile">🧾 Información</a>
+        <a class="nav-item" href="#" data-nav="messages">💬 Mensajes</a>
+        <a class="nav-item" href="/web/auth/candidate-settings.html" data-nav="settings">⚙️ Configuración</a>
+      </nav>
+
+<div class="sidebar-foot ths-foot" id="ths_sidebar_footer">
+
+  <div class="ths-foot-top">
+    <span class="ths-foot-dot" aria-hidden="true"></span>
+    <span class="ths-foot-dot" aria-hidden="true"></span>
+    <span class="ths-foot-dot" aria-hidden="true"></span>
+    <small class="muted ths-foot-title">Talenorix Hiring Solutions · Footer</small>
+  </div>
+
+  <!-- Plataforma -->
+  <div class="ths-acc">
+    <button class="ths-acc-btn" type="button" data-acc="plataforma" aria-expanded="false">
+      <span class="ths-acc-label">Plataforma</span>
+      <span class="ths-acc-chevron" aria-hidden="true">▾</span>
+    </button>
+
+    <div class="ths-acc-panel" data-panel="plataforma" hidden>
+      <a class="ths-acc-link" href="#" data-nav="candidatos">
+        <span class="ths-bullet" aria-hidden="true"></span>
+        Candidatos
+      </a>
+      <a class="ths-acc-link" href="#" data-nav="empresas">
+        <span class="ths-bullet" aria-hidden="true"></span>
+        Empresas
+      </a>
+      <a class="ths-acc-link" href="#" data-nav="comunidad">
+        <span class="ths-bullet" aria-hidden="true"></span>
+        Comunidad
+      </a>
+    </div>
+  </div>
+
+  <!-- Recursos -->
+  <div class="ths-acc">
+    <button class="ths-acc-btn" type="button" data-acc="recursos" aria-expanded="false">
+      <span class="ths-acc-label">Recursos</span>
+      <span class="ths-acc-chevron" aria-hidden="true">▾</span>
+    </button>
+
+    <div class="ths-acc-panel" data-panel="recursos" hidden>
+      <a class="ths-acc-link" href="#" data-nav="guias">
+        <span class="ths-bullet" aria-hidden="true"></span>
+        Guías
+      </a>
+      <a class="ths-acc-link" href="#" data-nav="blog">
+        <span class="ths-bullet" aria-hidden="true"></span>
+        Blog
+      </a>
+      <a class="ths-acc-link" href="#" data-nav="faq">
+        <span class="ths-bullet" aria-hidden="true"></span>
+        Preguntas Frecuentes
+      </a>
+    </div>
+  </div>
+
+  <!-- Legales -->
+  <div class="ths-acc">
+    <button class="ths-acc-btn" type="button" data-acc="legales" aria-expanded="false">
+      <span class="ths-acc-label">Legales</span>
+      <span class="ths-acc-chevron" aria-hidden="true">▾</span>
+    </button>
+
+    
+    <div class="ths-acc-panel" data-panel="legales" hidden>
+      <a class="ths-acc-link" href="/web/legal/politica-privacidad.html" data-nav="privacy">
+        <span class="ths-bullet" aria-hidden="true"></span>
+        Política de Privacidad
+      </a>
+      <a class="ths-acc-link" href="/web/legal/terminos-condiciones.html" data-nav="terms-conditions">
+        <span class="ths-bullet" aria-hidden="true"></span>
+        Términos y Condiciones
+      </a>
+      <a class="ths-acc-link" href="/web/legal/politica-cookies.html" data-nav="cookies">
+        <span class="ths-bullet" aria-hidden="true"></span>
+        Política de Cookies
+      </a>
+      <a class="ths-acc-link" href="#" data-nav="condiciones-uso">
+        <span class="ths-bullet" aria-hidden="true"></span>
+        Condiciones de Uso
+      </a>
+      <a class="ths-acc-link" href="/web/legal/seguridad-informacion.html" data-nav="seguridad-informacion">
+        <span class="ths-bullet" aria-hidden="true"></span>
+        Seguridad de la Información
+      </a>
+    </div>
+  </div>
+
+  <!-- Empresa -->
+  <div class="ths-acc">
+    <button class="ths-acc-btn" type="button" data-acc="empresa" aria-expanded="false">
+      <span class="ths-acc-label">Empresa</span>
+      <span class="ths-acc-chevron" aria-hidden="true">▾</span>
+    </button>
+
+    <div class="ths-acc-panel" data-panel="empresa" hidden>
+      <a class="ths-acc-link" href="#" data-nav="sobre">
+        <span class="ths-bullet" aria-hidden="true"></span>
+        Sobre Talenorix
+      </a>
+      <a class="ths-acc-link" href="#" data-nav="prensa">
+        <span class="ths-bullet" aria-hidden="true"></span>
+        Prensa
+      </a>
+      <a class="ths-acc-link" href="#" data-nav="contacto">
+        <span class="ths-bullet" aria-hidden="true"></span>
+        Contacto
+      </a>
+    </div>
+  </div>
+
+</div>
+
+</aside>
+
+<main class="main">
+  <div class="page-head">
+    <div class="page-head-left">
+      <h1 class="page-title">Completar tu perfil</h1>
+      <p class="page-subtitle">Tu información se guarda en tu cuenta.</p>
+    </div>
+
+    <div class="page-head-actions">
+      <button class="btn btn-ghost" id="btn_go_dashboard" type="button">Ir al dashboard</button>
+      <button class="btn btn-primary" id="btn_finish_profile" type="button">Finalizar perfil</button>
+    </div>
+  </div>
+
+  <div class="tabs-bar" role="tablist" aria-label="Secciones de perfil">
+    <button class="tab-pill is-active" type="button" role="tab" aria-selected="true" aria-controls="panel_profile" id="tab_profile" data-tab="profile">Perfil</button>
+    <button class="tab-pill" type="button" role="tab" aria-selected="false" aria-controls="panel_experience" id="tab_experience" data-tab="experience">Experiencia</button>
+    <button class="tab-pill" type="button" role="tab" aria-selected="false" aria-controls="panel_education" id="tab_education" data-tab="education">Educación</button>
+    <button class="tab-pill" type="button" role="tab" aria-selected="false" aria-controls="panel_certifications" id="tab_certifications" data-tab="certifications">Certificaciones</button>
+    <button class="tab-pill" type="button" role="tab" aria-selected="false" aria-controls="panel_skills" id="tab_skills" data-tab="skills">Habilidades</button>
+    <button class="tab-pill" type="button" role="tab" aria-selected="false" aria-controls="panel_languages" id="tab_languages" data-tab="languages">Idiomas</button>
+    <!--button class="tab-pill" type="button" role="tab" aria-selected="false" aria-controls="panel_others" id="tab_others" data-tab="others">Otros</button>
+    <button class="tab-pill" type="button" role="tab" aria-selected="false" aria-controls="panel_documents" id="tab_documents" data-tab="documents">Documentos</button-->
+  </div>
+
+  <!-- PANELS -->
+  <section class="panel is-active" id="panel_profile" role="tabpanel" aria-labelledby="tab_profile" data-panel="profile">
+    <div class="panel-grid">
+      <!-- Left: Photo + Identity -->
+      <div class="panel-col-left">
+        <div class="card">
+          <div class="card-head">
+            <div class="card-title">Foto</div>
+            <div class="card-subtitle muted">Sube una foto para tu perfil.</div>
+          </div>
+
+          <div class="card-body">
+            <div class="photo-box">
+              <img id="photo_preview" class="photo-preview" alt="Foto de perfil" />
+            </div>
+
+            <div class="form-row">
+              <label class="label" for="photo_file">Seleccionar archivo</label>
+              <input class="input" id="photo_file" type="file" accept="image/jpeg,image/png,image/webp" />
+              <div class="help muted">Máx 2.5MB · JPG/PNG/WEBP</div>
+            </div>
+
+            <div class="btn-row">
+              <button class="btn btn-primary" id="btn_upload_photo" type="button">Subir foto</button>
+              <button class="btn btn-ghost" id="btn_remove_photo" type="button">Quitar</button>
+            </div>
+
+            <div class="status" id="photo_status" aria-live="polite"></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-head">
+            <div class="card-title">Identidad</div>
+            <div class="card-subtitle muted">Estos datos vienen de tu cuenta.</div>
+          </div>
+
+          <div class="card-body">
+            <div class="grid-2">
+              <div class="form-row">
+                <label class="label" for="p_first_name">Nombre</label>
+                <input class="input" id="p_first_name" type="text" readonly />
+              </div>
+
+              <div class="form-row">
+                <label class="label" for="p_middle_name">Segundo nombre</label>
+                <input class="input" id="p_middle_name" type="text" readonly />
+              </div>
+
+              <div class="form-row">
+                <label class="label" for="p_last_name">Apellido</label>
+                <input class="input" id="p_last_name" type="text" readonly />
+              </div>
+
+              <div class="form-row">
+                <label class="label" for="p_second_last_name">Segundo apellido</label>
+                <input class="input" id="p_second_last_name" type="text" readonly />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <label class="label" for="p_email">Email</label>
+              <input class="input" id="p_email" type="email" readonly />
+            </div>
+
+            <div class="status" id="identity_status" aria-live="polite"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Headline + Location -->
+      <div class="panel-col-right">
+        <div class="card">
+          <div class="card-head">
+            <div class="card-title">Titular y Contacto</div>
+            <div class="card-subtitle muted">Lo que verán las empresas.</div>
+          </div>
+
+          <div class="card-body">
+            <div class="form-row">
+              <label class="label" for="cp_headline">Titular profesional</label>
+              <input class="input" id="cp_headline" type="text" placeholder="Ej: Desarrollador Full Stack" />
+            </div>
+
+            <div class="form-row">
+              <label class="label" for="cp_summary">Resumen profesional</label>
+              <textarea class="textarea" id="cp_summary" rows="5" placeholder="Describe tu perfil profesional..."></textarea>
+            </div>
+
+            <div class="grid-2">
+              <div class="form-row">
+                <label class="label" for="cp_phone">Teléfono</label>
+                <input class="input" id="cp_phone" type="tel" placeholder="+507 ..." />
+              </div>
+
+              <div class="form-row">
+                <label class="label" for="cp_whatsapp">WhatsApp</label>
+                <input class="input" id="cp_whatsapp" type="tel" placeholder="+507 ..." />
+              </div>
+            </div>
+
+            <div class="btn-row">
+              <button class="btn btn-primary" id="btn_save_profile" type="button">Guardar cambios</button>
+            </div>
+
+            <div class="status" id="profile_status" aria-live="polite"></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-head">
+            <div class="card-title">Ubicación</div>
+            <div class="card-subtitle muted">Tu país y provincia/estado.</div>
+          </div>
+
+          <div class="card-body">
+            <div class="grid-2">
+              <div class="form-row">
+                <label class="label" for="cp_country_place_id">País</label>
+                <select class="select" id="cp_country_place_id">
+                  <option value="">Selecciona un país</option>
+                </select>
+              </div>
+
+              <div class="form-row">
+                <label class="label" for="cp_state_id">Estado / Provincia</label>
+                <select class="select" id="cp_state_id" disabled>
+                  <option value="">Selecciona un estado</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <label class="label" for="cp_address">Dirección</label>
+              <input class="input" id="cp_address" type="text" placeholder="Ej: Calle / Sector (opcional)" />
+            </div>
+
+            <div class="btn-row">
+              <button class="btn btn-primary" id="btn_save_location" type="button">Guardar ubicación</button>
+            </div>
+
+            <div class="status" id="location_status" aria-live="polite"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel_experience" role="tabpanel" aria-labelledby="tab_experience" data-panel="experience" hidden>
+    <div class="panel-stack">
+      <div class="card">
+        <div class="card-head">
+          <div>
+            <div class="card-title">Experiencia</div>
+            <div class="card-subtitle muted">Agrega tu experiencia laboral.</div>
+          </div>
+          <div class="card-head-actions">
+            <button class="btn btn-ghost" id="btn_exp_add" type="button">Agregar</button>
+            <button class="btn btn-primary" id="btn_exp_save" type="button">Guardar</button>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="list" id="exp_list"></div>
+          <div class="status" id="exp_status" aria-live="polite"></div>
+        </div>
+      </div>
+    </div>
+
+    <template id="tpl_experience_item">
+      <div class="item-card" data-item="experience">
+        <div class="item-head">
+          <div class="item-title">Experiencia</div>
+          <div class="item-actions">
+            <!--button class="btn btn-ghost btn-sm" type="button" data-action="move-up">↑</button>
+            <button class="btn btn-ghost btn-sm" type="button" data-action="move-down">↓</button-->
+            <button class="btn btn-ghost btn-sm danger" type="button" data-action="delete">Eliminar</button>
+          </div>
+        </div>
+
+        <div class="item-body">
+          <input type="hidden" data-field="id" />
+
+          <div class="grid-2">
+            <div class="form-row">
+              <label class="label">Empresa</label>
+              <input class="input" type="text" data-field="company_name" placeholder="Nombre de empresa" />
+            </div>
+
+            <div class="form-row">
+              <label class="label">Cargo</label>
+              <input class="input" type="text" data-field="job_title" placeholder="Puesto / cargo" />
+            </div>
+          </div>
+
+          <div class="grid-2">
+            <div class="form-row">
+              <label class="label">Tipo de empleo</label>
+              <input class="input" type="text" data-field="employment_type" placeholder="Full-time / Part-time / Contrato..." />
+            </div>
+
+            <div class="form-row">
+              <label class="label">Ubicación</label>
+              <input class="input" type="text" data-field="location_text" placeholder="Ciudad, país (texto)" />
+            </div>
+          </div>
+
+          <div class="grid-2">
+            <div class="form-row">
+              <label class="label">Fecha inicio</label>
+              <input class="input" type="date" data-field="start_date" />
+            </div>
+
+            <div class="form-row">
+              <label class="label">Fecha fin</label>
+              <input class="input" type="date" data-field="end_date" />
+            </div>
+          </div>
+
+          <div class="form-row checkbox-row">
+            <label class="checkbox">
+              <input type="checkbox" data-field="is_current" />
+              <span>Trabajo actual</span>
+            </label>
+          </div>
+
+          <div class="form-row">
+            <label class="label">Descripción</label>
+            <textarea class="textarea" rows="4" data-field="description" placeholder="Logros, responsabilidades..."></textarea>
+          </div>
+        </div>
+      </div>
+    </template>
+  </section>
+<section class="panel" id="panel_education" role="tabpanel" aria-labelledby="tab_education" data-panel="education" hidden>
+  <div class="panel-stack">
+    <div class="card">
+      <div class="card-head">
+        <div>
+          <div class="card-title">Educación</div>
+          <div class="card-subtitle muted">Agrega tu formación académica.</div>
+        </div>
+        <div class="card-head-actions">
+          <button class="btn btn-ghost" id="btn_edu_add" type="button">Agregar</button>
+          <button class="btn btn-primary" id="btn_edu_save" type="button">Guardar</button>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <div class="list" id="edu_list"></div>
+        <div class="status" id="edu_status" aria-live="polite"></div>
+      </div>
+    </div>
+  </div>
+
+  <template id="tpl_education_item">
+    <div class="item-card" data-item="education">
+      <div class="item-head">
+        <div class="item-title">Educación</div>
+        <div class="item-actions">
+          <!--button class="btn btn-ghost btn-sm" type="button" data-action="move-up">↑</button>
+          <button class="btn btn-ghost btn-sm" type="button" data-action="move-down">↓</button-->
+          <button class="btn btn-ghost btn-sm danger" type="button" data-action="delete">Eliminar</button>
+        </div>
+      </div>
+
+      <div class="item-body">
+        <input type="hidden" data-field="id" />
+
+        <div class="form-row">
+          <label class="label">Institución</label>
+          <input class="input" type="text" data-field="institution" placeholder="Universidad / Instituto" />
+        </div>
+
+        <div class="grid-2">
+          <div class="form-row">
+            <label class="label">Título / Grado</label>
+            <select class="input" data-field="degree">
+              <option value="">Selecciona</option>
+              <option value="secundaria">Secundaria</option>
+              <option value="diplomado">Diplomado</option>
+              <option value="post-grado">Post-Grado</option>
+              <option value="tecnico">Técnico</option>
+              <option value="licenciatura">Licenciatura</option>
+              <option value="licenciatura">Maestría</option>
+              <option value="doctorado">Doctorado</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label class="label">Área de estudio</label>
+            <input class="input" type="text" data-field="field_of_study" placeholder="Ej: Sistemas, Negocios..." />
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div class="form-row">
+            <label class="label">Fecha inicio</label>
+            <input class="input" type="date" data-field="start_date" />
+          </div>
+
+          <div class="form-row">
+            <label class="label">Fecha fin</label>
+            <input class="input" type="date" data-field="end_date" />
+          </div>
+        </div>
+
+        <div class="form-row checkbox-row">
+          <label class="checkbox">
+            <input type="checkbox" data-field="is_current" />
+            <span>Actualmente estudiando</span>
+          </label>
+        </div>
+
+        <div class="form-row">
+          <label class="label">Descripción</label>
+          <textarea class="textarea" rows="4" data-field="description" placeholder="Logros, materias, proyectos..."></textarea>
+        </div>
+      </div>
+    </div>
+  </template>
+</section>
+
+  <section class="panel" id="panel_certifications" role="tabpanel" aria-labelledby="tab_certifications" data-panel="certifications" hidden>
+    <div class="panel-stack">
+      <div class="card">
+        <div class="card-head">
+          <div>
+            <div class="card-title">Certificaciones</div>
+            <div class="card-subtitle muted">Agrega certificaciones y credenciales.</div>
+          </div>
+          <div class="card-head-actions">
+            <button class="btn btn-ghost" id="btn_cert_add" type="button">Agregar</button>
+            <button class="btn btn-primary" id="btn_cert_save" type="button">Guardar</button>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="list" id="cert_list"></div>
+          <div class="status" id="cert_status" aria-live="polite"></div>
+        </div>
+      </div>
+    </div>
+
+    <template id="tpl_cert_item">
+      <div class="item-card" data-item="certifications">
+        <div class="item-head">
+          <div class="item-title">Certificación</div>
+          <div class="item-actions">
+            <button class="btn btn-ghost btn-sm" type="button" data-action="move-up">↑</button>
+            <button class="btn btn-ghost btn-sm" type="button" data-action="move-down">↓</button>
+            <button class="btn btn-ghost btn-sm danger" type="button" data-action="delete">Eliminar</button>
+          </div>
+        </div>
+
+        <div class="item-body">
+          <input type="hidden" data-field="id" />
+
+          <div class="grid-2">
+            <div class="form-row">
+              <label class="label">Nombre</label>
+              <input class="input" type="text" data-field="name" placeholder="Nombre de la certificación" />
+            </div>
+
+            <div class="form-row">
+              <label class="label">Emisor</label>
+              <input class="input" type="text" data-field="issuer" placeholder="Empresa / Institución" />
+            </div>
+          </div>
+
+          <div class="grid-2">
+            <div class="form-row">
+              <label class="label">Fecha de emisión</label>
+              <input class="input" type="date" data-field="issue_date" />
+            </div>
+
+            <div class="form-row">
+              <label class="label">Fecha de expiración</label>
+              <input class="input" type="date" data-field="expiry_date" />
+            </div>
+          </div>
+
+
+          <div class="grid-2">
+            <div class="form-row">
+              <label class="label">Url de Credencial</label>
+              <input class="input" type="url" data-field="credential_url" placeholder="https://..." />
+            </div>
+
+            <!--div class="form-row">
+              <label class="label">Ruta adjunto (texto)</label>
+              <input class="input" type="text" data-field="attachment_path" placeholder="path/archivo.pdf" />
+            </div-->
+          </div>
+        </div>
+      </div>
+    </template>
+  </section>
+
+<!-- =========================
+     PANEL: HABILIDADES (nuevo)
+     - Un solo input
+     - Chips compactos con X
+     - NO flechas / NO botón eliminar dentro del item
+========================= -->
+<section class="panel" id="panel_skills" role="tabpanel" aria-labelledby="tab_skills" data-panel="skills" hidden>
+  <div class="panel-stack">
+    <div class="card">
+      <div class="card-head">
+        <div>
+          <div class="card-title">Habilidades</div>
+          <div class="card-subtitle muted">Agrega habilidades técnicas y blandas.</div>
+        </div>
+        <div class="card-head-actions">
+          <button class="btn btn-ghost" id="btn_skill_add" type="button">Agregar</button>
+          <button class="btn btn-primary" id="btn_skill_save" type="button">Guardar</button>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <!-- ÚNICO INPUT -->
+        <div class="skills-add">
+          <input
+            class="input skills-input"
+            id="skill_input"
+            type="text"
+            placeholder="Escribe una habilidad y presiona Enter…"
+            autocomplete="off"
+          />
+          <div class="help muted">Ej: MS Office, Canva, Excel, Atención al cliente…</div>
+        </div>
+
+        <!-- CHIPS -->
+        <div class="skills-chips" id="skills_list" aria-label="Lista de habilidades"></div>
+
+        <div class="status" id="skills_status" aria-live="polite"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TEMPLATE: chip -->
+  <template id="tpl_skill_item">
+    <div class="skill-chip" data-item="skills">
+      <!-- Campos DB (ocultos) -->
+      <input type="hidden" data-field="id" />
+      <input type="hidden" data-field="skill_name" />
+      <input type="hidden" data-field="level" />
+      <input type="hidden" data-field="years_experience" />
+      <input type="hidden" data-field="skill_key" />
+
+      <!-- Label visible (JS lo llena) -->
+      <span class="skill-chip__label" data-role="label"></span>
+
+      <!-- X: tu módulo delete engancha data-action="delete" -->
+      <button class="skill-chip__x" type="button" data-action="delete" aria-label="Eliminar habilidad" title="Eliminar">
+        ✕
+      </button>
+    </div>
+  </template>
+</section>
+
+
+  <section class="panel" id="panel_languages" role="tabpanel" aria-labelledby="tab_languages" data-panel="languages" hidden>
+    <div class="panel-stack">
+      <div class="card">
+        <div class="card-head">
+          <div>
+            <div class="card-title">Idiomas</div>
+            <div class="card-subtitle muted">Agrega los idiomas que dominas.</div>
+          </div>
+          <div class="card-head-actions">
+            <button class="btn btn-ghost" id="btn_lang_add" type="button">Agregar</button>
+            <button class="btn btn-primary" id="btn_lang_save" type="button">Guardar</button>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="list" id="languages_list"></div>
+          <div class="status" id="languages_status" aria-live="polite"></div>
+        </div>
+      </div>
+    </div>
+
+    <template id="tpl_language_item">
+      <div class="item-card" data-item="languages">
+        <div class="item-head">
+          <div class="item-title">Idioma</div>
+          <div class="item-actions">
+            <button class="btn btn-ghost btn-sm" type="button" data-action="move-up">↑</button>
+            <button class="btn btn-ghost btn-sm" type="button" data-action="move-down">↓</button>
+            <button class="btn btn-ghost btn-sm danger" type="button" data-action="delete">Eliminar</button>
+          </div>
+        </div>
+
+        <div class="item-body">
+          <input type="hidden" data-field="id" />
+
+          <div class="grid-2">
+            <div class="form-row">
+              <label class="label">Idioma</label>
+              <input class="input" type="text" data-field="language" placeholder="Ej: Español" />
+            </div>
+
+            <div class="form-row">
+              <label class="label">Dominio</label>
+              <input class="input" type="text" data-field="proficiency" placeholder="Básico / Intermedio / Avanzado / Nativo" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </template>
+  </section>
+
+  <section class="panel" id="panel_others" role="tabpanel" aria-labelledby="tab_others" data-panel="others" hidden>
+    <div class="panel-stack">
+      <div class="card">
+        <div class="card-head">
+          <div>
+            <div class="card-title">Otros</div>
+            <div class="card-subtitle muted">Información adicional.</div>
+          </div>
+          <div class="card-head-actions">
+            <button class="btn btn-ghost" id="btn_other_add" type="button">Agregar</button>
+            <button class="btn btn-primary" id="btn_other_save" type="button">Guardar</button>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="list" id="others_list"></div>
+          <div class="status" id="others_status" aria-live="polite"></div>
+        </div>
+      </div>
+    </div>
+
+    <template id="tpl_other_item">
+      <div class="item-card" data-item="others">
+        <div class="item-head">
+          <div class="item-title">Otro</div>
+          <div class="item-actions">
+            <button class="btn btn-ghost btn-sm" type="button" data-action="move-up">↑</button>
+            <button class="btn btn-ghost btn-sm" type="button" data-action="move-down">↓</button>
+            <button class="btn btn-ghost btn-sm danger" type="button" data-action="delete">Eliminar</button>
+          </div>
+        </div>
+
+        <div class="item-body">
+          <input type="hidden" data-field="id" />
+
+          <div class="grid-2">
+            <div class="form-row">
+              <label class="label">Label</label>
+              <input class="input" type="text" data-field="label" placeholder="Ej: Disponibilidad" />
+            </div>
+
+            <div class="form-row">
+              <label class="label">Value</label>
+              <input class="input" type="text" data-field="value" placeholder="Ej: Inmediata" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </template>
+  </section>
+
+  <section class="panel" id="panel_documents" role="tabpanel" aria-labelledby="tab_documents" data-panel="documents" hidden>
+    <div class="panel-stack">
+      <div class="card">
+        <div class="card-head">
+          <div>
+            <div class="card-title">Documentos</div>
+            <div class="card-subtitle muted">Agrega documentos (por ahora registra el path).</div>
+          </div>
+          <div class="card-head-actions">
+            <button class="btn btn-ghost" id="btn_doc_add" type="button">Agregar</button>
+            <button class="btn btn-primary" id="btn_doc_save" type="button">Guardar</button>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="list" id="documents_list"></div>
+          <div class="status" id="documents_status" aria-live="polite"></div>
+        </div>
+      </div>
+    </div>
+
+    <template id="tpl_document_item">
+      <div class="item-card" data-item="documents">
+        <div class="item-head">
+          <div class="item-title">Documento</div>
+          <div class="item-actions">
+            <button class="btn btn-ghost btn-sm" type="button" data-action="move-up">↑</button>
+            <button class="btn btn-ghost btn-sm" type="button" data-action="move-down">↓</button>
+            <button class="btn btn-ghost btn-sm danger" type="button" data-action="delete">Eliminar</button>
+          </div>
+        </div>
+
+        <div class="item-body">
+          <input type="hidden" data-field="id" />
+
+          <div class="grid-2">
+            <div class="form-row">
+              <label class="label">Kind</label>
+              <input class="input" type="text" data-field="kind" placeholder="Ej: CV, Certificado, Portafolio" />
+            </div>
+
+            <div class="form-row">
+              <label class="label">Label (opcional)</label>
+              <input class="input" type="text" data-field="label" placeholder="Ej: CV actualizado" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label class="label">Path</label>
+            <input class="input" type="text" data-field="path" placeholder="Ruta/URL del documento" />
+          </div>
+
+          <div class="form-row">
+            <label class="label">Subida (UI preparada)</label>
+            <input class="input" type="file" data-field="file_stub" />
+            <div class="help muted">Esta subida se conectará luego al bucket que definamos (no inventado aquí).</div>
+          </div>
+        </div>
+      </div>
+    </template>
+  </section>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true" hidden></div>
+</main>
+
+  </div> 
+  <script src="/web/supabaseClient.js"></script>
+   <script src="/web/auth/candidate-information.js"></script> 
+   <script src="/web/auth/logout-candidate.js"></script>
+   <script src="/web/auth/candidate-sidebar.js"></script>
+</body> 
+</html>

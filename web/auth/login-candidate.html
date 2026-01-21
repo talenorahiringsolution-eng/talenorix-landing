@@ -1,0 +1,99 @@
+<!-- /web/auth/login-candidate.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iniciar sesión | Talenorix</title>
+
+  <link rel="stylesheet" href="../css/normalize.css" />
+  <link rel="stylesheet" href="../css/auth-candidate.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+  <script defer src="../supabaseClient.js"></script>
+  <script defer src="../auth/login-candidate.js"></script>
+
+
+
+</head>
+
+<body class="candidate-auth">
+
+<!-- HEADER (idéntico al register-candidate) -->
+<header class="main-header">
+  <div class="barra-superior">
+    <a class="brand" href="/index.html" aria-label="Ir al inicio">
+      <img
+        src="../assets/logo/ths rombo mostasa fondo transparente.png"
+        alt="Talenorix Hiring Solutions"
+        class="topbar-logo"
+      />
+      <span class="brand-name">TALENORIX HIRING SOLUTIONS</span>
+    </a>
+
+    <div class="language-selector">
+      <label for="languageSelector" class="lang-label">Language / Idioma</label>
+      <select id="languageSelector" class="lang-select">
+        <option value="es">Español</option>
+        <option value="en">English</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="header-actions">
+    <a class="back-button" href="/index.html">← Volver al inicio</a>
+  </div>
+</header>
+
+<main class="candidate-auth__main">
+  <section class="candidate-card">
+    <div class="candidate-card__grid">
+
+      <!-- Izquierda -->
+      <div class="candidate-card__intro">
+        <h1 class="candidate-title">Iniciar sesión</h1>
+        <p class="candidate-subtitle">
+          Ingresa con el correo con el que confirmaste tu cuenta.
+        </p>
+      </div>
+
+      <!-- Derecha -->
+      <div class="candidate-card__form">
+        <form id="loginCandidateForm" novalidate>
+          <h2 class="candidate-form-title">Acceder</h2>
+
+          <p id="msg" class="msg"></p>
+
+          <div class="field">
+            <label for="email">Correo electrónico</label>
+            <input id="email" type="email" autocomplete="email" required />
+          </div>
+
+          <div class="field">
+            <label for="password">Contraseña</label>
+            <div class="password-row">
+              <input id="password" type="password" autocomplete="current-password" required />
+              <button type="button" class="eye" id="togglePass" aria-label="Mostrar/ocultar contraseña">👁</button>
+            </div>
+          </div>
+
+          <button id="btn" type="submit" class="btn-primary">
+            Iniciar sesión
+          </button>
+
+          <p class="login-link">
+            ¿No tienes cuenta?
+            <a href="./register-candidate.html">Crear cuenta</a>
+          </p>
+        </form>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+
+
+</body>
+</html>
+
+
