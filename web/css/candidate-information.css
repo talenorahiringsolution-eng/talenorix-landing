@@ -1,0 +1,667 @@
+/* candidate-profile.css */
+:root{
+--bg: #f5f7fb;
+--panel: #ffffff;
+--text: #0f172a;
+--muted: #64748b;
+--line: #e6eaf2;
+--shadow: 0 10px 30px rgba(15, 23, 42, .08);
+--shadow-soft: 0 6px 16px rgba(15, 23, 42, .08);
+--primary: #2f80ed;
+--primary-2: #1d6fe0;
+--danger: #ef4444;
+--radius: 16px;
+--radius-sm: 12px;
+--focus: 0 0 0 4px rgba(47,128,237,.18);
+--sidebar: #ffffff;
+--header: #ffffff;
+}
+
+*{ box-sizing:border-box; }
+html, body{ height:100%; }
+body{
+margin:0;
+font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+color: var(--text);
+background: var(--bg);
+}
+
+.muted{ color: var(--muted); }
+.help{ font-size: 12px; margin-top:6px; }
+small{ font-size: 12px; }
+
+.btn{
+appearance:none;
+border:1px solid transparent;
+border-radius: 12px;
+padding: 10px 14px;
+font-weight: 600;
+cursor:pointer;
+transition: .15s ease;
+user-select:none;
+white-space:nowrap;
+}
+.btn:focus{ outline:none; box-shadow: var(--focus); }
+.btn:disabled{ opacity:.6; cursor:not-allowed; }
+
+.btn-primary{
+background: var(--primary);
+color:#fff;
+}
+.btn-primary:hover{ background: var(--primary-2); }
+
+.btn-ghost{
+background: transparent;
+border-color: var(--line);
+color: var(--text);
+}
+.btn-ghost:hover{ background: rgba(15,23,42,.04); }
+
+.btn-sm{
+padding: 6px 10px;
+border-radius: 10px;
+font-weight: 700;
+font-size: 12px;
+}
+.btn-sm.danger{
+border-color: rgba(239,68,68,.25);
+color: var(--danger);
+}
+.btn-sm.danger:hover{ background: rgba(239,68,68,.08); }
+
+.app-header{
+position: sticky;
+top:0;
+z-index: 50;
+height: 68px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding: 0 18px;
+background: var(--header);
+border-bottom: 1px solid var(--line);
+}
+
+.header-left{
+display:flex;
+align-items:center;
+gap:12px;
+min-width: 220px;
+}
+.logo-square{
+width:44px;
+height:44px;
+border-radius: 12px;
+background: #0f172a;
+}
+.brand-title{ font-weight: 800; font-size: 14px; line-height: 1; }
+.brand-subtitle{ font-size: 12px; color: var(--muted); margin-top: 4px; }
+
+.header-center{
+flex: 1;
+display:flex;
+justify-content:center;
+padding: 0 12px;
+}
+.header-title{
+font-weight: 800;
+font-size: 14px;
+color: var(--text);
+text-align:center;
+max-width: 740px;
+overflow:hidden;
+text-overflow:ellipsis;
+white-space:nowrap;
+}
+
+.header-right{ min-width: 220px; display:flex; justify-content:flex-end; }
+
+.app-shell{
+display:flex;
+min-height: calc(100vh - 68px);
+}
+
+.sidebar{
+width: 260px;
+background: var(--sidebar);
+border-right: 1px solid var(--line);
+padding: 10px 10px 14px;
+position: sticky;
+top: 68px;
+height: calc(100vh - 68px);
+overflow:auto;
+}
+.sidebar-top{
+display:flex;
+justify-content:flex-end;
+padding: 6px 6px 10px;
+}
+.sidebar-toggle{
+display:none;
+padding: 8px 12px;
+}
+
+.sidebar-nav{
+display:flex;
+flex-direction:column;
+gap: 6px;
+padding: 6px;
+}
+.nav-item{
+display:flex;
+align-items:center;
+gap: 10px;
+padding: 10px 12px;
+border-radius: 12px;
+text-decoration:none;
+color: var(--text);
+border: 1px solid transparent;
+transition: .15s ease;
+}
+.nav-item:hover{
+background: rgba(15,23,42,.04);
+border-color: var(--line);
+}
+.nav-item.active{
+background: rgba(47,128,237,.10);
+border-color: rgba(47,128,237,.25);
+color: var(--primary-2);
+font-weight: 800;
+}
+
+.sidebar-foot{
+margin-top: 10px;
+padding: 10px 12px;
+border-top: 1px solid var(--line);
+color: var(--muted);
+}
+
+.main{
+flex:1;
+padding: 18px 18px 48px;
+}
+
+.page-head{
+display:flex;
+align-items:flex-start;
+justify-content:space-between;
+gap: 16px;
+margin-bottom: 12px;
+}
+.page-title{
+margin:0;
+font-size: 28px;
+letter-spacing: -.02em;
+}
+.page-subtitle{
+margin: 6px 0 0;
+color: var(--muted);
+font-size: 14px;
+}
+.page-head-actions{
+display:flex;
+gap: 10px;
+align-items:center;
+}
+
+.tabs-bar{
+display:flex;
+flex-wrap:wrap;
+gap: 10px;
+margin: 14px 0 18px;
+}
+.tab-pill{
+border: 1px solid var(--line);
+background: #fff;
+border-radius: 999px;
+padding: 10px 14px;
+font-weight: 800;
+color: var(--text);
+cursor:pointer;
+transition: .15s ease;
+}
+.tab-pill:hover{ background: rgba(15,23,42,.03); }
+.tab-pill:focus{ outline:none; box-shadow: var(--focus); }
+.tab-pill.is-active{
+background: rgba(47,128,237,.12);
+border-color: rgba(47,128,237,.30);
+color: var(--primary-2);
+}
+
+.panel{ display:none; }
+.panel.is-active{ display:block; }
+
+.panel-grid{
+display:grid;
+grid-template-columns: 360px 1fr;
+gap: 18px;
+align-items:start;
+}
+
+.panel-col-left, .panel-col-right{ display:flex; flex-direction:column; gap: 16px; }
+
+.panel-stack{ display:flex; flex-direction:column; gap: 16px; }
+
+.card{
+background: var(--panel);
+border: 1px solid var(--line);
+border-radius: var(--radius);
+box-shadow: var(--shadow-soft);
+}
+.card-head{
+padding: 16px 16px 10px;
+display:flex;
+align-items:flex-start;
+justify-content:space-between;
+gap: 12px;
+border-bottom: 1px solid var(--line);
+}
+.card-title{
+font-size: 16px;
+font-weight: 900;
+}
+.card-subtitle{ margin-top: 6px; font-size: 13px; }
+.card-head-actions{ display:flex; gap: 10px; align-items:center; }
+
+.card-body{ padding: 16px; }
+
+.form-row{ margin-bottom: 12px; }
+.label{
+display:block;
+font-size: 12px;
+font-weight: 800;
+color: var(--muted);
+margin-bottom: 8px;
+}
+.input, .select, .textarea{
+width:100%;
+border: 1px solid var(--line);
+border-radius: 12px;
+padding: 12px 12px;
+font-size: 14px;
+background:#fff;
+color: var(--text);
+transition: .15s ease;
+}
+.input:focus, .select:focus, .textarea:focus{
+outline:none;
+border-color: rgba(47,128,237,.55);
+box-shadow: var(--focus);
+}
+.textarea{ resize: vertical; min-height: 110px; }
+
+.grid-2{
+display:grid;
+grid-template-columns: 1fr 1fr;
+gap: 12px;
+}
+
+.btn-row{
+display:flex;
+gap: 10px;
+align-items:center;
+margin-top: 6px;
+}
+
+.status{
+margin-top: 10px;
+font-size: 13px;
+color: var(--muted);
+min-height: 18px;
+}
+
+.photo-box{
+width: 100%;
+display:flex;
+justify-content:center;
+margin-bottom: 12px;
+}
+.photo-preview{
+width: 148px;
+height: 148px;
+border-radius: 999px;
+border: 1px solid var(--line);
+object-fit: cover;
+background: rgba(15,23,42,.04);
+}
+
+.checkbox-row{ margin-top: -4px; }
+.checkbox{
+display:flex;
+align-items:center;
+gap: 10px;
+font-weight: 700;
+color: var(--text);
+}
+.checkbox input{ width: 18px; height: 18px; }
+
+.list{
+display:flex;
+flex-direction:column;
+gap: 12px;
+}
+
+.item-card{
+border: 1px solid var(--line);
+border-radius: var(--radius-sm);
+padding: 12px;
+background: #fff;
+}
+.item-head{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap: 12px;
+margin-bottom: 10px;
+}
+.item-title{ font-weight: 900; }
+.item-actions{ display:flex; gap: 8px; align-items:center; }
+.item-body{ padding-top: 4px; }
+
+.toast{
+position: fixed;
+right: 18px;
+bottom: 18px;
+background: #0f172a;
+color: #fff;
+border-radius: 14px;
+padding: 12px 14px;
+box-shadow: var(--shadow);
+max-width: 360px;
+}
+
+/* Responsive */
+@media (max-width: 1080px){
+.panel-grid{ grid-template-columns: 1fr; }
+.header-left, .header-right{ min-width: 160px; }
+}
+
+@media (max-width: 860px){
+.sidebar{
+position: fixed;
+left: 0;
+top: 68px;
+height: calc(100vh - 68px);
+transform: translateX(-110%);
+transition: .2s ease;
+z-index: 60;
+box-shadow: var(--shadow);
+}
+.sidebar.is-open{ transform: translateX(0); }
+.sidebar-toggle{ display:inline-flex; }
+.main{ padding: 14px 14px 48px; }
+.page-head{ flex-direction:column; align-items:flex-start; }
+.page-head-actions{ width:100%; flex-wrap:wrap; }
+}
+
+/* =========================================================
+   THS Sidebar Footer Accordion (multi-open)
+========================================================= */
+.ths-foot{
+  margin-top: 10px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+}
+
+.ths-foot-top{
+  display:flex;
+  align-items:center;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.ths-foot-dot{
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(15,23,42,18);
+  border: 1px solid var(--line);
+}
+
+.ths-foot-title{
+  margin-left: 6px;
+  font-weight: 800;
+  letter-spacing: -.01em;
+}
+
+.ths-acc{
+  margin-top: 8px;
+}
+
+.ths-acc-btn{
+  width: 100%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--text);
+  font-weight: 900;
+  cursor: pointer;
+  transition: .15s ease;
+}
+
+.ths-acc-btn:hover{
+  background: rgba(15,23,42,03);
+  border-color: var(--line);
+}
+
+.ths-acc-btn[aria-expanded="true"]{
+  background: rgba(47,128,237,06);
+  border-color: var(--line);
+}
+
+.ths-acc-label{
+  font-size: 12px;
+}
+
+.ths-acc-chevron{
+  font-weight: 900;
+  transition: transform .15s ease;
+}
+
+.ths-acc-btn[aria-expanded="true"] .ths-acc-chevron{
+  transform: rotate(180deg);
+}
+
+.ths-acc-panel[hidden]{
+  display: none !important;
+  margin-top: 6px;
+  padding-left: 10px;
+  flex-direction:column;
+  gap: 6px;
+}
+
+.ths-acc-link{
+  display:flex;
+  align-items:center;
+  gap: 8px;
+  padding: 6px 8px;
+  border-radius: 10px;
+  text-decoration:none;
+  color: var(--text);
+  font-weight: 800;
+  font-size: 12px;
+  border: 1px solid transparent;
+  transition: .15s ease;
+}
+
+.ths-acc-link:hover{
+  background: rgba(15,23,42,03);
+  border-color: var(--line);
+}
+
+.ths-bullet{
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(47,128,237,30);
+  border: 1px solid rgba(47,128,237,35);
+  flex: 0 0 auto;
+}
+
+/* =========================================================
+   SETTINGS — SEGURIDAD (Password input con ojo DENTRO)
+   ✅ Solo afecta el panel #panel_security
+   ✅ No rompe inputs globales
+   ✅ Estilo tipo “login dark” (como tu referencia)
+========================================================= */
+
+/* Wrapper */
+#panel_security .ths-pw-in{
+  position: relative;
+  width: 100%;
+}
+
+/* Input oscuro tipo login + espacio para el ojo dentro */
+#panel_security .ths-pw-in .input{
+  padding-right: 46px; /* espacio para el ojo */
+  background: rgba(10, 26, 47, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: #F7EFE6;
+  box-shadow: 0 10px 24px rgba(0,0,0,.18);
+}
+
+/* Placeholder legible */
+#panel_security .ths-pw-in .input::placeholder{
+  color: rgba(247, 239, 230, 0.55);
+}
+
+/* Focus elegante sin matar tu sistema */
+#panel_security .ths-pw-in .input:focus{
+  outline: none;
+  border-color: rgba(199, 154, 0, 0.65);
+  box-shadow:
+    0 0 0 3px rgba(199, 154, 0, 0.18),
+    0 12px 28px rgba(0,0,0,.22);
+}
+
+/* Botón ojo dentro */
+#panel_security .ths-pw-eye{
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(247, 239, 230, 0.92);
+
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  user-select: none;
+}
+
+#panel_security .ths-pw-eye:hover{
+  background: rgba(255, 255, 255, 0.10);
+  border-color: rgba(199, 154, 0, 0.55);
+}
+
+#panel_security .ths-pw-eye:active{
+  transform: translateY(-50%) scale(0.98);
+}
+
+/* Nota debajo (si la usas) */
+#panel_security .ths-mini-note{
+  margin-top: 6px;
+  font-size: 12px;
+  color: rgba(15, 23, 42, 0.62);
+}
+
+/* Mobile: ojo un pelín más chico */
+@media (max-width: 520px){
+  #panel_security .ths-pw-eye{
+    width: 32px;
+    height: 32px;
+    border-radius: 9px;
+  }
+  #panel_security .ths-pw-in .input{
+    padding-right: 44px;
+  }
+}
+/* =========================================================
+   THS — Candidate Settings / Seguridad (Password + Eye inside)
+   ✅ NO rompe nada existente
+   ✅ Solo clases nuevas (prefijo ths-)
+========================================================= */
+
+.ths-pw-in{
+  position: relative;
+  width: 100%;
+}
+
+.ths-pw-in .input{
+  width: 100%;
+  padding-right: 44px; /* espacio para el ojo dentro */
+}
+
+.ths-pw-eye{
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.04);
+  color: var(--text);
+  cursor: pointer;
+  user-select: none;
+  padding: 0;
+}
+
+.ths-pw-eye:hover{
+  background: rgba(255,255,255,0.07);
+}
+
+.ths-pw-eye:active{
+  transform: translateY(-50%) scale(0.98);
+}
+
+.ths-pw-eye:focus{
+  outline: none;
+}
+
+.ths-pw-eye:focus-visible{
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+/* Ícono (emoji o svg) centrado */
+.ths-pw-eye .icon{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  font-size: 16px;
+}
+
+/* Nota chica debajo (ej: "La contraseña actual se muestra en modo protegido") */
+.ths-mini-note{
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* Ajuste visual cuando el input es readonly (contraseña actual) */
+.ths-pw-in .input[readonly]{
+  opacity: 0.95;
+  background: rgba(255,255,255,0.03);
+}
+
+

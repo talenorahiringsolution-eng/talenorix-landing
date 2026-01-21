@@ -1,0 +1,127 @@
+:root {
+  --bg-main: #f7f2ec;
+  --bg-hero: #0a2540;
+  --bg-hero-dark: #010913;
+  --text-dark: #132033;
+  --text-light: #f5f7fa;
+  --accent: #4fa8ff;
+  --accent-light: #7dc5ff;
+  --card-bg: #ffffff;
+
+  --radius: 16px;
+  --radius-sm: 12px;
+
+  --shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+  --shadow-soft: 0 4px 14px rgba(0, 0, 0, 0.06);
+
+  --font-title: "Plus Jakarta Sans", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}.policy-main {
+  padding: 40px 16px;
+  display: flex;
+  justify-content: center;
+  background: #f3f4f6; /* Puedes cambiarlo o quitarlo si no quieres color de fondo */
+}
+
+.policy-card {
+  width: 100%;
+  max-width: 1100px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px 28px;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.25); /* sombreado CEO */
+  border: 1px solid #e5e7eb;
+}
+
+/* Cada bloque (Introducción, 1, 2, 3, etc.) */
+.policy-item {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.policy-item:last-of-type {
+  border-bottom: none;
+}
+
+/* Cabecera clicable con el título + signo */
+.policy-header {
+  width: 100%;
+  padding: 16px 0;
+  background: transparent;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: #0A1A2F;
+  text-align: left;
+}
+
+.policy-header span:first-child {
+  flex: 1;
+}
+
+/* Signo + */
+.policy-toggle {
+  font-size: 1.4rem;
+  line-height: 1;
+  font-weight: 700;
+  color: #C79A00; /* dorado Talenora */
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* Cuerpo de cada sección */
+.policy-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding-bottom: 0;
+}
+
+.policy-body p,
+.policy-body ul,
+.policy-body li {
+  font-size: 0.94rem;
+  line-height: 1.6;
+  color: #111827;
+}
+
+.policy-body ul {
+  margin: 0 0 0 1.25rem;
+  padding: 0;
+}
+
+.policy-body li {
+  margin-bottom: 0.5rem;
+}
+
+/* Cuando el bloque está abierto */
+.policy-item.is-open .policy-body {
+  max-height: 3000px; /* suficiente para texto largo */
+  padding-bottom: 12px;
+}
+
+.policy-item.is-open .policy-toggle {
+  transform: rotate(45deg); /* se ve como una X / menos */
+  color: #0A1A2F;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .policy-card {
+    padding: 18px 16px;
+    border-radius: 12px;
+  }
+
+  .policy-header {
+    padding: 14px 0;
+  }
+}

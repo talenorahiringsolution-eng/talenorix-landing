@@ -1,0 +1,432 @@
+/* /web/css/auth-candidate.css
+   TALENORIX — AUTH CANDIDATE (REGISTER)
+   Diseñado para NO romper auth-company.css ni otras páginas.
+*/
+
+.candidate-auth{
+  --navy: #06172b;
+  --navy-2: #0a2540;
+  --gold: #C79A00;
+  --text: #EAF0FF;
+  --muted: rgba(234,240,255,.74);
+  --card: rgba(255,255,255,.06);
+  --line: rgba(255,255,255,.10);
+  --shadow: 0 18px 50px rgba(0,0,0,.32);
+  --radius: 18px;
+
+  background: radial-gradient(1000px 700px at 20% 10%, rgba(79,168,255,.14), transparent 55%),
+              radial-gradient(900px 680px at 80% 40%, rgba(199,154,0,.12), transparent 60%),
+              linear-gradient(180deg, var(--navy) 0%, #020a14 100%);
+  color: var(--text);
+  min-height: 100vh;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Main wrapper */
+.candidate-auth__main{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 22px 16px 42px;
+}
+
+/* Card */
+.candidate-card{
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(255,255,255,.03);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.candidate-card__grid{
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: 0;
+}
+
+@media (max-width: 980px){
+  .candidate-card__grid{ grid-template-columns: 1fr; }
+}
+
+/* Left */
+.candidate-card__intro{
+  padding: 28px 28px 26px;
+  border-right: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01));
+}
+@media (max-width: 980px){
+  .candidate-card__intro{ border-right: none; border-bottom: 1px solid var(--line); }
+}
+
+.candidate-title{
+  margin: 0 0 8px;
+  font-size: 28px;
+  letter-spacing: .2px;
+}
+
+.candidate-subtitle{
+  margin: 0 0 18px;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.candidate-bullets{
+  margin: 0 0 18px;
+  padding: 0 0 0 18px;
+  color: var(--text);
+}
+.candidate-bullets li{
+  margin: 8px 0;
+  color: rgba(234,240,255,.88);
+}
+
+.candidate-note{
+  margin-top: 14px;
+  padding: 14px 14px 10px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(255,255,255,.03);
+}
+
+.pwd-rules{
+  margin: 10px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.rule{
+  margin: 7px 0;
+  font-size: 14px;
+  letter-spacing: .2px;
+}
+.rule.bad{ color: rgba(234,240,255,.60); }
+.rule.good{ color: #7ef0a5; }
+
+.rules-error{
+  margin: 10px 0 0;
+  color: #ff98a2;
+  font-size: 13px;
+}
+
+/* Right */
+.candidate-card__form{
+  padding: 28px;
+  background: rgba(0,0,0,.10);
+}
+
+.candidate-form-title{
+  margin: 0 0 14px;
+  font-size: 20px;
+  letter-spacing: .2px;
+}
+
+.msg{
+  min-height: 18px;
+  margin: 0 0 12px;
+  font-size: 14px;
+}
+
+/* Form */
+.field{ margin-bottom: 14px; }
+.field label{
+  display: block;
+  margin: 0 0 6px;
+  font-size: 14px;
+  color: rgba(234,240,255,.88);
+}
+
+.field input{
+  width: 100%;
+  padding: 12px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  outline: none;
+  background: rgba(255,255,255,.04);
+  color: var(--text);
+}
+.field input::placeholder{ color: rgba(234,240,255,.45); }
+.field input:focus{
+  border-color: rgba(79,168,255,.55);
+  box-shadow: 0 0 0 3px rgba(79,168,255,.15);
+}
+
+.grid-2{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+@media (max-width: 520px){
+  .grid-2{ grid-template-columns: 1fr; }
+}
+
+/* Password row */
+.password-row{
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  align-items: center;
+}
+.eye{
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.04);
+  color: var(--text);
+  padding: 10px 12px;
+  cursor: pointer;
+}
+.eye:hover{
+  border-color: rgba(199,154,0,.55);
+}
+
+/* Legal */
+.legal-check{
+  display: grid;
+  grid-template-columns: 18px 1fr;
+  gap: 10px;
+  align-items: start;
+  margin: 14px 0 14px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(255,255,255,.03);
+}
+.legal-check label{
+  font-size: 13px;
+  line-height: 1.35;
+  color: rgba(234,240,255,.86);
+}
+.legal-check a{
+  color: #7dc5ff;
+  text-decoration: none;
+}
+.legal-check a:hover{
+  text-decoration: underline;
+}
+
+/* Buttons & links */
+.btn-primary{
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(199,154,0,.55);
+  background: linear-gradient(180deg, rgba(199,154,0,.28), rgba(199,154,0,.18));
+  color: var(--text);
+  cursor: pointer;
+  font-weight: 700;
+  letter-spacing: .2px;
+}
+.btn-primary:disabled{
+  opacity: .7;
+  cursor: not-allowed;
+}
+
+.login-link{
+  margin: 12px 0 0;
+  font-size: 14px;
+  color: rgba(234,240,255,.78);
+  text-align: center;
+}
+.login-link a{
+  color: #7dc5ff;
+  text-decoration: none;
+}
+.login-link a:hover{ text-decoration: underline; }
+
+
+/* =========================================================
+   FIX HEADER CANDIDATE (no afecta company)
+   ========================================================= */
+.candidate-auth .main-header{
+  padding: 10px 14px !important;
+}
+
+.candidate-auth .barra-superior{
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 14px !important;
+  padding: 0 !important;
+}
+
+.candidate-auth .brand{
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  text-decoration: none !important;
+}
+
+.candidate-auth .topbar-logo{
+  height: 44px !important;      /* ✅ aquí controlas el tamaño */
+  width: auto !important;
+  max-height: 44px !important;
+  max-width: 160px !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+
+.candidate-auth .brand-name{
+  font-size: 14px !important;
+  line-height: 1.1 !important;
+  letter-spacing: .6px !important;
+  white-space: nowrap !important;
+}
+
+@media (max-width: 520px){
+  .candidate-auth .topbar-logo{ height: 38px !important; max-height: 38px !important; }
+  .candidate-auth .brand-name{ font-size: 12px !important; }
+}
+
+
+/* =========================================================
+   HEADER UI POLISHED (solo candidate)
+   ========================================================= */
+
+/* Tipografía / color del header */
+.candidate-auth .main-header{
+  background: transparent !important;
+}
+
+.candidate-auth .brand-name{
+  color: rgba(234,240,255,.92) !important;  /* blanco elegante */
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+}
+
+/* Selector de idioma (que no se vea “tirado”) */
+.candidate-auth .language-selector{
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+.candidate-auth .lang-label{
+  color: rgba(234,240,255,.82) !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+}
+
+.candidate-auth .lang-select{
+  height: 34px !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(255,255,255,.16) !important;
+  background: rgba(255,255,255,.05) !important;
+  color: rgba(234,240,255,.92) !important;
+  padding: 0 10px !important;
+  outline: none !important;
+}
+
+.candidate-auth .lang-select:focus{
+  border-color: rgba(79,168,255,.55) !important;
+  box-shadow: 0 0 0 3px rgba(79,168,255,.15) !important;
+}
+
+/* Botón volver al inicio: se ve profesional */
+.candidate-auth .header-actions{
+  margin-top: 8px !important;
+  padding: 0 14px !important;
+}
+
+.candidate-auth .back-button{
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+
+  padding: 10px 12px !important;
+  border-radius: 14px !important;
+
+  border: 1px solid rgba(255,255,255,.14) !important;
+  background: rgba(255,255,255,.04) !important;
+
+  color: rgba(234,240,255,.90) !important;
+  text-decoration: none !important;
+
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  letter-spacing: .2px !important;
+}
+
+/* Flecha más “icono” */
+.candidate-auth .back-button::before{
+  content: "←";
+  font-size: 16px;
+  line-height: 1;
+  opacity: .95;
+}
+
+.candidate-auth .back-button:hover{
+  border-color: rgba(199,154,0,.45) !important;
+  background: rgba(199,154,0,.12) !important;
+}
+
+.candidate-auth .back-button:active{
+  transform: translateY(1px);
+}
+
+/* =========================================================
+   FIX FORM OVERFLOW / INPUTS (solo candidate)
+   Evita que los campos "se pasen" o se monten.
+   ========================================================= */
+
+/* 1) Box sizing global dentro de la tarjeta */
+.candidate-auth .candidate-card,
+.candidate-auth .candidate-card *{
+  box-sizing: border-box !important;
+}
+
+/* 2) Asegura que el grid permita encoger columnas (clave en CSS Grid) */
+.candidate-auth .grid-2{
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+}
+
+/* 3) Inputs y contenedores: nada se sale del ancho */
+.candidate-auth .field,
+.candidate-auth .field *{
+  min-width: 0 !important;
+}
+
+/* 4) Forzar estilo consistente en inputs (evita blanco / estilos globales) */
+.candidate-auth .field input{
+  width: 100% !important;
+  max-width: 100% !important;
+
+  height: 46px !important;           /* altura consistente */
+  padding: 12px 14px !important;     /* padding consistente */
+
+  border-radius: 12px !important;
+  border: 1px solid rgba(255,255,255,.16) !important;
+
+  background: rgba(255,255,255,.04) !important;  /* ✅ oscuro */
+  color: rgba(234,240,255,.92) !important;
+
+  outline: none !important;
+}
+
+/* 5) Inputs focus bonitos */
+.candidate-auth .field input:focus{
+  border-color: rgba(79,168,255,.55) !important;
+  box-shadow: 0 0 0 3px rgba(79,168,255,.16) !important;
+}
+
+/* 6) Password row: el input no se monta con el botón ojo */
+.candidate-auth .password-row{
+  grid-template-columns: minmax(0, 1fr) 44px !important;
+  gap: 10px !important;
+}
+
+.candidate-auth .eye{
+  width: 44px !important;
+  height: 46px !important;
+  padding: 0 !important;
+  display: grid !important;
+  place-items: center !important;
+}
+
+/* 7) Responsive: en pantallas medianas/bajas, 1 columna para evitar choques */
+@media (max-width: 760px){
+  .candidate-auth .grid-2{
+    grid-template-columns: 1fr !important;
+  }
+}

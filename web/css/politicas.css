@@ -1,0 +1,303 @@
+/* Fondo de página general */
+body {
+  font-family: "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #2e2e2e;
+  background-color: #0A1A2F; /* Azul corporativo */
+  margin: 0;
+  padding: 0;
+}
+
+/* Contenedor general con sombra y fondo azul */
+main.politica {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0;
+  background-color: #0A1A2F; /* Azul corporativo */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+}
+
+/* Panel interno claro con bordes redondeados */
+.politica-inner {
+  background-color: #F7EFE6; /* Crema suave */
+  padding: 40px 30px;
+  border-radius: 12px;
+}
+
+/* Título principal */
+h1 {
+  font-size: 2.2em;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #C79A00; 
+  border-bottom: 4px solid #C79A00; /* Línea dorada mostaza */
+  padding-bottom: 10px;
+}
+
+/* Subtítulos */
+h2 {
+  font-size: 1.6em;
+  margin-top: 40px;
+  color:#e7c041;
+}
+
+h3 {
+  font-size: 1.2em;
+  margin-top: 25px;
+  color:#F7EFE6;
+}
+
+/* Párrafos y listas */
+p {
+  margin-bottom: 1em;
+  color: #F7EFE6;
+  text-align: justify;
+}
+
+ul, ol {
+  padding-left: 1.5em;
+  margin-bottom: 1em;
+}
+
+li {
+  margin-bottom: 0.5em;
+  color: #F7EFE6;
+}
+
+/* Negritas */
+strong {
+  color: #7fa5d6;
+}
+
+/* Tablas */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #0A1A2F;
+  color: #F7EFE6;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .politica-inner {
+    padding: 20px 15px;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  h2 {
+    font-size: 1.4em;
+  }
+
+  h3 {
+    font-size: 1.1em;
+  }
+
+  body {
+    font-size: 15px;
+  }
+}
+/* CUADRO LEGAL DESTACADO */
+.legal-box {
+  background-color: #0A1A2F; /* Azul corporativo */
+  padding: 40px 35px;
+  margin: 40px auto;
+  border-radius: 14px;
+
+  /* Sombra ejecutiva */
+  box-shadow:
+    0 12px 30px rgba(206, 205, 205, 0.35),
+    0 2px 8px rgba(0, 0, 0, 0.15);
+
+  max-width: 960px;
+}
+
+/* Texto interno del cuadro */
+.legal-box h2,
+.legal-box h3 {
+  color: #C79A00; /* Dorado mostaza */
+}
+
+.legal-box p,
+.legal-box li {
+  color: #F7EFE6; /* Crema suave */
+}
+
+/* Listas */
+.legal-box ul {
+  padding-left: 20px;
+}
+
+.legal-box li {
+  margin-bottom: 8px;
+}
+
+/* Separación visual entre secciones */
+.legal-box h2 {
+  margin-top: 40px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(199, 154, 0, 0.35);
+}
+
+/* Primera sección sin margen superior exagerado */
+.legal-box h2:first-child {
+  margin-top: 0;
+}
+.doc-meta {
+  text-align: center;
+  font-size: 5rem;
+  color:  #F7EFE6;
+  margin-bottom: 2px;
+}
+.legal-logo {
+  text-align: center;
+  margin-bottom: 5px;
+  display:flex;
+  justify-content:center;
+  padding: 2rem;
+
+}
+.legal-logo img {
+    max-width: 30rem;
+    height: auto;
+    background-color: #0A1A2F ;
+    /*Azulcorporativo*/
+    padding: 1px;
+    border-radius: 12px ;
+    -webkit-border-radius: 12px ;
+    -moz-border-radius: 12px ;
+    -ms-border-radius: 12px ;
+    -o-border-radius: 12px ;
+}
+
+.legal-header {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 20px;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #0A1A2F; /* Azul corporativo */
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 0 0 12px 12px;
+}
+.legal-logo-img {
+    max-width: 25rem;
+    height: auto;
+}
+.legal-divider {
+  flex-grow: 1  ;
+  width: 100%;
+  height: 4px;
+  background-color: #C79A00; /* Dorado mostaza */
+  opacity: 0.9  ;
+  margin: 12px 0;
+}
+.legal-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #F7EFE6; /* Crema suave */
+  text-align: center;
+  margin: 0;
+}
+
+/* =========================================================
+   SECCIÓN LEGAL (encaja con TU CSS actual)
+   - Fondo interno: crema (#F7EFE6) porque va dentro de .politica-inner
+   - Tipografía y jerarquía “jurídica” clara
+   - Compatible con tu .legal-box si decides meterla ahí
+========================================================= */
+
+.legal-prohibitions {
+  margin: 28px 0;
+  padding: 18px 22px;
+  background-color: rgba(247, 239, 230, 0.96); /* crema, coherente con .politica-inner */
+  border: 1px solid rgba(10, 26, 47, 0.18);
+  border-left: 6px solid #C79A00; /* dorado */
+  border-radius: 12px;
+  box-shadow: 0 10px 22px rgba(10, 26, 47, 0.12);
+}
+
+.legal-prohibitions .legal-prohibitions-title {
+  margin: 0 0 10px 0;
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  color: #0A1A2F; /* azul corporativo */
+  text-transform: uppercase;
+}
+
+.legal-prohibitions p {
+  margin: 0 0 12px 0;
+  color: #0A1A2F; /* dentro del panel crema debe ser azul, no blanco */
+  font-size: 0.98rem;
+  line-height: 1.65;
+  text-align: justify;
+}
+
+.legal-prohibitions ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.legal-prohibitions li {
+  margin: 0 0 10px 0;
+  color: #0A1A2F; /* legible sobre crema */
+  font-size: 0.98rem;
+  line-height: 1.65;
+}
+
+.legal-prohibitions li:last-child {
+  margin-bottom: 0;
+}
+
+.legal-prohibitions li strong {
+  color: #0A1A2F;
+  font-weight: 800;
+}
+
+/* Si esta sección vive DENTRO de .legal-box (fondo azul),
+   fuerza colores claros para que no se “pierda” */
+.legal-box .legal-prohibitions {
+  background-color: rgba(10, 26, 47, 0.75);
+  border: 1px solid rgba(247, 239, 230, 0.18);
+  border-left: 6px solid #C79A00;
+}
+
+.legal-box .legal-prohibitions .legal-prohibitions-title,
+.legal-box .legal-prohibitions p,
+.legal-box .legal-prohibitions li,
+.legal-box .legal-prohibitions li strong {
+  color: #F7EFE6;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .legal-prohibitions {
+    padding: 16px 16px;
+    border-radius: 10px;
+  }
+
+  .legal-prohibitions .legal-prohibitions-title {
+    font-size: 0.98rem;
+  }
+
+  .legal-prohibitions p,
+  .legal-prohibitions li {
+    font-size: 0.95rem;
+  }
+}
