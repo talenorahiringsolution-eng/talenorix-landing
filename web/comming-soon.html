@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Talenorix · En construcción</title>
+
+  <!-- Preloads obligatorios -->
+  <link rel="preload" href="./web/css/normalize.css" as="style" />
+  <link rel="stylesheet" href="/web/css/normalize.css" />
+
+  <link rel="preload" href="./web/css/footer.css" as="style" />
+  <link rel="stylesheet" href="/web/css/footer.css" />
+
+  <link rel="preload" href="./web/css/heather.css" as="style" />
+  <link rel="stylesheet" href="/web/css/heather.css" />
+
+  <style>
+    :root{
+      --bg:#0A1A2F;
+      --card:#0f233f;
+      --line:rgba(255,255,255,.14);
+      --txt:#F7EFE6;
+      --muted:rgba(247,239,230,.78);
+      --gold:#C79A00;
+    }
+    body{background:var(--bg); color:var(--txt); min-height:100vh}
+    .wrap{max-width:980px; margin:0 auto; padding:28px 18px}
+    .top{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 16px; border:1px solid var(--line);
+      border-radius:14px; background:rgba(255,255,255,.03);
+    }
+    .brand{display:flex; align-items:center; gap:12px; text-decoration:none; color:inherit}
+    .brand img{width:44px;height:44px;border-radius:10px;background:#111827;padding:6px}
+    .brand .name{font-weight:800; letter-spacing:.2px}
+    .brand .tag{font-size:.9rem; color:var(--muted)}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      height:38px; padding:0 14px; border-radius:10px;
+      border:1px solid var(--line); color:var(--txt); text-decoration:none;
+      background:rgba(255,255,255,.03);
+    }
+    .btn:hover{border-color:rgba(255,255,255,.22)}
+    .card{
+      margin-top:18px; padding:22px; border-radius:18px;
+      border:1px solid var(--line);
+      background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      box-shadow:0 20px 60px rgba(0,0,0,.35);
+    }
+    h1{margin:0 0 8px; font-size:1.8rem}
+    p{margin:0; color:var(--muted); line-height:1.5}
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:8px 12px; border-radius:999px;
+      border:1px solid rgba(199,154,0,.35);
+      color:var(--txt); background:rgba(199,154,0,.12);
+      margin-top:12px; font-weight:700; font-size:.95rem;
+    }
+    .actions{display:flex; flex-wrap:wrap; gap:10px; margin-top:16px}
+    .primary{
+      background:var(--gold); color:#0A1A2F; border-color:transparent;
+      font-weight:800;
+    }
+    .primary:hover{filter:brightness(1.03)}
+  </style>
+</head>
+
+<body>
+  <main class="wrap">
+    <header class="top">
+      <a class="brand" href="index.html" aria-label="Talenorix Home">
+        <img src="./assets/logo/ths rombo mostasa fondo transparente.png" alt="Talenorix" />
+        <div>
+          <div class="name">Talenorix</div>
+          <div class="tag">Hiring Solutions</div>
+        </div>
+      </a>
+
+      <a class="btn" href="/web/web-index.html">Volver al Home</a>
+    </header>
+
+    <section class="card">
+      <h1>Módulo en construcción</h1>
+      <p>
+        Esta sección está en desarrollo y se habilitará pronto.
+        Por ahora, el flujo disponible es completar perfil de candidato.
+      </p>
+
+      <div class="pill">✅ Recomendado: Completar tu perfil</div>
+
+      <div class="actions">
+        <a class="btn primary" href="/web/auth/login-candidate.html">Entrar como Candidato</a>
+        <a class="btn" href="/web/auth/login-company.html">Empresa (próximamente)</a>
+      </div>
+    </section>
+
+ 
+  </main>
+</body>
+</html>
