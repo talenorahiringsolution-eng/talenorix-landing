@@ -1,0 +1,14 @@
+{
+  "name": "talenorix-ats-crm",
+  "version": "1.0.0",
+  "description": "Carga de GeoNames para Talenora ATS CRM",
+  "type": "module",
+  "scripts": {
+    "load": "node load-geonames.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.89.0",
+    "dotenv": "^16.6.1",
+    "normalize.css": "^8.0.1"
+  }
+}
