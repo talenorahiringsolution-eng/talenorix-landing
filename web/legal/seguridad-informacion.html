@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentación Legal y Políticas - Talenorix</title>
+  <link rel="stylesheet" href="/web/css/politicas.css">
+</head>
+<body>
+      <div class="legal-header">
+        <img src="/web/assets/logo/fondo transparente letras mostaza.png" alt="Talenorix Logo" class="legal-logo-img">
+        <div class="legal-divider">
+        <h1 class="legal-title">Política de Seguridad de la Información</h1>
+      </div>
+    <main class="politica"> 
+ 
+    <div class="legal-box">
+        <!--p class="doc-meta"><strong>T</strong>alenorix <strong>H</strong>iring <strong>S</strong>olutions</p-->
+        <p><strong>Última actualización:</strong> 28 de diciembre de 2025</p>
+
+<h2>1. Objetivo, alcance y postura de seguridad</h2>
+<h3>1.1 Objetivo</h3>
+<p>Esta Política establece el marco de seguridad de la información de Talenorix Hiring Solutions (“Talenorix”, “la Plataforma”, “el Servicio”) para proteger la confidencialidad, integridad y disponibilidad de la información y los sistemas, incluyendo datos personales, datos empresariales, credenciales, registros operativos, archivos (CVs, documentos de verificación, evidencias), y datos derivados de procesos automatizados (incluyendo scoring/matching por IA cuando se haya desarrollado y se encuentre en ejecución). </p>
+<h3>1.2 Alcance</h3>
+
+ <p>La Política aplica a:</p>
+    <p>Todos los entornos, componentes y servicios que conforman Talenorix (web, módulos ATS/CRM, panel empresa, panel candidato, autenticación, mensajería, analítica, integraciones y componentes futuros).</p>
+    <p>Infraestructura y servicios de terceros usados para operar el Servicio (hosting, bases de datos, almacenamiento, correo transaccional, observabilidad/monitoreo, analítica, servicios antiabuso, proveedores de verificación y proveedores de IA externos). </p>
+<p>Todo personal interno y externo con acceso administrativo, técnico u operativo a los sistemas y a la información (incluye desarrolladores, soporte, proveedores y consultores). </p>
+    <p>Usuarios finales: candidatos, empresas, reclutadores, administradores autorizados y visitantes, en cuanto a responsabilidades de uso seguro y protección de credenciales.</p>    
+    <h3>1.3 Postura de seguridad (principio rector)</h3>
+    <p>Talenorix opera bajo una postura de “seguridad proporcional al riesgo”: la seguridad se diseña para soportar un entorno de reclutamiento con datos potencialmente sensibles, con controles consistentes y auditables, sin afirmar certificaciones (p. ej. ISO 27001/SOC 2) mientras no se hayan implementado y verificado formalmente. La Plataforma se guía por buenas prácticas inspiradas en marcos como ISO 27001 y NIST CSF, como referencia, no como declaración de cumplimiento.</p>
+    
+    <h2>2. Definiciones clave</h2>
+    <p>Para evitar ambigüedades operativas:</p>
+    <p>Información: cualquier dato gestionado por Talenorix (personal, empresarial, técnica, contractual, operativa).</p>
+    <p>Datos sensibles: datos que, por su naturaleza, requieren mayor protección (salud, biométricos, orientación sexual, afiliación política/sindical, etc.).</p>
+    <p>Datos derivados: resultados generados por la Plataforma (p. ej. scoring, ranking, matching, etiquetas de perfil, señales de riesgo).</p>
+    <p>Incidente de seguridad: evento que compromete o amenaza confidencialidad, integridad o disponibilidad (incluye accesos no autorizados, fuga, alteración, ransomware, abuso de credenciales, exfiltración).</p>
+    <p>Proveedor de IA externo: tercero que procesa datos (entrada/salida) para generar resultados mediante modelos (LLM u otros).</p>
+    <h2>3. Principios de seguridad</h2>
+    <p>Talenorix se rige por los siguientes principios operativos y verificables:</p>
+    <p>Mínimo privilegio y necesidad de saber: cada rol accede solo a lo imprescindible; el acceso a datos personales y sensibles se limita, se registra y se revisa. </p>
+    <p>Defensa en profundidad: controles en múltiples capas (aplicación, base de datos, infraestructura, identidad, monitoreo, proveedores, respuesta a incidentes).</p>
+        <p>Seguridad por diseño y por defecto: no se liberan funcionalidades sin revisión de riesgos; configuraciones por defecto priorizan protección y reducción de superficie de ataque. </p>
+    <p>Gestión de riesgos continua: se identifican riesgos, se priorizan por impacto y probabilidad, y se ejecutan mitigaciones razonables. </p>
+    <p>Transparencia ante incidentes: investigación y notificación cuando corresponda legalmente.</p>
+    <p>Mejora continua: revisiones periódicas y por cambios relevantes. </p>
+    <h2>4. Gobernanza, roles y responsabilidades</h2>
+    <h3>4.1 Dirección de Talenorix (Owner / CEO)</h3>
+    <p>Es responsable última del programa de seguridad: aprueba políticas, prioriza riesgos, asigna recursos mínimos indispensables y define apetito de riesgo aceptable.</p>
+    <h3>4.2 Responsable técnico / Desarrollo (Security & Engineering Lead)</h3>
+    <p>Implementa y mantiene controles técnicos: autenticación, sesiones, cifrado, RLS, hardening, monitoreo, backups, gestión de vulnerabilidades, y controles DevSecOps. Tiene autoridad para bloquear despliegues que introduzcan riesgo crítico no mitigado. </p>
+    <h3>4.3 Soporte / Operaciones</h3>
+    <p>No solicita ni almacena contraseñas. Gestiona reportes de usuarios, sospechas de abuso, y solicitudes relacionadas con seguridad; escala incidentes al responsable técnico. Mantiene guías internas de verificación de identidad para cambios sensibles (p. ej. recuperación de cuenta). </p>
+    <h3>4.4 Proveedores y terceros</h3>
+    <p>Cualquier tercero con acceso a datos o sistemas debe estar sujeto a obligaciones contractuales de confidencialidad, seguridad y tratamiento limitado; se selecciona con criterios de riesgo, localización, historial y controles disponibles. </p>
+    <h3>4.5 Responsabilidades de los usuarios</h3>
+    <p>Los usuarios deben proteger credenciales, no compartir cuentas, usar correos válidos, y reportar actividad sospechosa al canal oficial. El incumplimiento puede causar suspensión preventiva por protección del ecosistema. </p>
+        <h2>5. Gestión de identidad, acceso y autenticación</h2>
+    <h3>5.1 Cuentas, credenciales y autenticación</h3>
+    <p>Cada usuario tiene cuenta única. Las contraseñas se almacenan mediante mecanismos robustos de hash (nunca en texto plano). Los tokens/credenciales sensibles no deben registrarse en logs.</p>
+    <h3>5.2 Control de acceso por roles</h3>
+    <p>Los permisos se implementan en dos planos:</p>
+        <p>Aplicación: autorización por rol (candidato/empresa/reclutador/admin) y por pertenencia (company_id, tenant).</p>
+    <p>Base de datos: control de acceso a nivel de fila (Row Level Security — RLS) y reglas por user_id/company_id/rol, para impedir lectura/escritura cruzada.</p>
+     <p>Criterio operativo: si un control existe solo en frontend, se considera inexistente.</p>
+    <h3>5.3 Sesiones y gestión de sesión</h3>
+    <p>Las sesiones deben expirar. Se aplican mecanismos de revocación ante eventos críticos (cambio de contraseña, detección de compromiso, cierre de cuenta, sospecha de abuso). Se recomienda cerrar sesión en dispositivos compartidos.</p>
+    <h3>5.4 Acceso administrativo</h3>
+    <p>El acceso administrativo a infraestructura y data debe estar restringido, registrado, revisado periódicamente y, cuando sea viable, protegido con MFA (doble factor). Los accesos de proveedores se otorgan con caducidad y se revocan al terminar su necesidad.</p>
+    <h2>6. Protección de datos: cifrado, secretos y manejo seguro de información</h2>
+    <h3>6.1 Datos en tránsito</h3>
+    <p>Todo tráfico viaja sobre HTTPS (TLS). No se permiten endpoints de producción en HTTP sin cifrado. </p>
+      <h3>6.2 Datos en reposo</h3>
+    <p>Bases de datos y almacenamiento de archivos (CVs, documentos, imágenes) se alojan en proveedores con cifrado en reposo a nivel de volumen/disco y controles de acceso estrictos. El acceso se limita a procesos autorizados. </p>
+    <h3>6.3 Gestión de secretos (secrets management</h3>
+    <p>Claves, tokens, credenciales de servicios y llaves API se tratan como secretos. Reglas mínimas:</p>
+     <p>No se incrustan secretos en repositorios públicos o código cliente si no es estrictamente necesario.</p>
+    <p>Se rotan secretos ante sospecha o incidentes.</p>
+    <p>Se aplican permisos mínimos por secreto (scoped tokens) y separación por entorno.</p>
+     <h3>6.4 Minimización y reducción de exposición</h3>
+    <p>Talenorix evita recopilar o exponer datos sensibles innecesarios; cuando un usuario sube información sensible voluntariamente, se aplican medidas reforzadas de acceso y se habilitan mecanismos de eliminación controlada, cuando sea técnica y legalmente viable.</p>
+     <h2>7. Seguridad de arquitectura, infraestructura y entornos</h2> 
+    <p >Talenorix opera sobre servicios cloud con controles físicos y lógicos adecuados (redundancia, seguridad de datacenter, monitoreo). Se mantiene, cuando sea viable, separación lógica de entornos desarrollo/pruebas/producción, evitando el uso de datos reales en entornos no productivos. Si se requiere usar datos para pruebas, deben anonimizarse o seudoanonimizarse. </p>
+     <p>Se aplican configuraciones seguras (hardening) y actualización razonable de componentes para reducir exposición a vulnerabilidades conocidas.</p>
+    <h2>8. Seguridad de base de datos, RLS y multi-tenant</h2>
+     <p>Todas las tablas con datos personales/profesionales/empresariales deben protegerse con RLS u otro control equivalente a nivel de registro. La plataforma debe impedir la existencia de endpoints o consultas que devuelvan listados completos de candidatos/empresas sin autorización y propósito legítimo. </p>
+    <p>En un SaaS multi-tenant, la regla de oro es: no existe “consulta global” por defecto; todo acceso debe estar condicionado por tenant/rol/propósito.</p>
+    
+     <h2>9. DevSecOps y ciclo de vida de desarrollo seguro (Secure SDLC)</h2>
+    <p>Talenorix integra seguridad en el ciclo de desarrollo mediante prácticas DevSecOps proporcionales a su etapa, con el objetivo de prevenir riesgos antes de llegar a producción. Esto incluye:</p>
+     <p>Validación de entrada/salida (tipos, tamaños, formatos), mitigación de XSS, CSRF e inyecciones. </p>
+    <p>Manejo de errores sin revelar trazas o secretos al usuario final; logging interno con higiene de datos. </p>
+         <p>Control de cambios: revisiones de código, registro de cambios relevantes y repositorios con control de acceso.</p>
+    <p>Gestión de dependencias: actualización razonable y revisión de vulnerabilidades (SCA) cuando el proyecto esté estable. </p>
+     <p>Escaneo y gates de seguridad (cuando sea viable): análisis estático básico (SAST), chequeos de secretos, y revisión de configuración antes de despliegues.</p>
+    <p>Regla ejecutiva: ninguna funcionalidad que toque autenticación, autorización, RLS, archivos o exportaciones de datos se despliega sin revisión explícita de seguridad.</p>
+      <h2>10. Seguridad específica para IA y proveedores externos de IA</h2>
+    <p>Cuando Talenorix integre proveedores externos de IA para procesamiento de datos (p. ej. scoring, matching, generación de texto), se aplicarán las siguientes medidas:</p>    
+    <p>Este es el bloque que te faltaba para estar “enterprise-ready” sin mentir.</p>
+    <h3>10.1 Principios para el uso de IA</h3>
+    <p>Talenorix puede usar IA para matching, scoring, extracción de datos de CV, clasificación, sugerencias y automatización operativa. La IA es un soporte; las decisiones finales de contratación pertenecen a las empresas/usuarios humanos según sus procesos. La seguridad para IA se gestiona como riesgo de datos y como riesgo de integridad del sistema.</p>
+    <h3>10.2 Riesgos principales y controles mínimos</h3>
+    <p>Talenorix implementa controles para:</p>
+    <p>Exfiltración involuntaria de datos: evitar enviar a proveedores IA más información de la necesaria</p>
+    <p>Prompt injection y manipulación: prevenir que contenido malicioso en CVs/mensajes fuerce al modelo a filtrar información o ejecutar instrucciones no deseada</p>
+    <p>Data poisoning: evitar usar datos no confiables para entrenar o ajustar modelos sin control.</p>
+    <p>Fuga por logs/telemetría: evitar que prompts/respuestas se registren con PII (datos personales) cuando no sea imprescindible.</p>
+    <p>Acceso indebido: limitar quién puede invocar funciones IA y con qué permisos.</p>    
+    <h3>10.3 Tratamiento de datos al usar proveedores externos de IA</h3>
+    <p>Cuando se utilicen proveedores externos:</p>
+    <p>Se aplican acuerdos contractuales equivalentes a “encargado/subencargado”, con obligación de confidencialidad, uso limitado y medidas de seguridad. </p>
+    <p>Se prioriza configuración que deshabilite (si está disponible) el uso de datos del cliente para entrenamiento general del proveedor, o se seleccionan opciones/planes que ofrezcan aislamiento.</p>
+    <p>Se minimiza la data: por defecto se envían fragmentos necesarios (p. ej. habilidades relevantes) en lugar del CV completo, salvo requerimiento funcional justificado</p>
+    <p>Se aplican controles de red/keys: llaves API con scopes mínimos, rotación, rate limiting, y monitoreo de consumo/anomalías.</p>
+    <p>Se evalúa residencia/región de procesamiento cuando sea relevante por ley o contrato.</p>
+    <h3>10.4 Controles de calidad y no discriminación (seguridad + confianza)</h3>
+    <p>Aunque esto cruza a privacidad/ética, aquí importa porque reduce riesgo reputacional:</p>
+    <p>Pruebas internas para detectar sesgos obvios y salidas no deseadas.</p>
+    <p>Explicabilidad razonable: registrar parámetros de scoring (a nivel técnico) para auditoría y debugging, sin exponer datos sensibles al usuario final.</p>
+        <p>Mecanismo de “human override”: la plataforma debe permitir que reclutadores revisen y corrijan resultados.</p>
+    <h2>11. Registro, monitoreo, detección y respuesta a incidentes</h2>
+    <h3>11.1 Registro de actividad (logging)</h3>
+    <p>Se registran eventos relevantes (intentos fallidos de login, cambios de credenciales, cambios de permisos, exportaciones, cargas/descargas de archivos, acciones administrativas). Los logs no deben contener contraseñas, tokens ni datos excesivamente sensibles salvo lo estrictamente necesario. </p>
+    <h3>11.2 Monitoreo y alertas</h3>
+    <p>Se monitorean errores, indisponibilidad y patrones anómalos en la medida razonable para el tamaño y etapa de Talenorix. Se prioriza: abuso de credenciales, scraping, exportaciones masivas, accesos fuera de patrón, y picos de uso IA.</p>
+    <h3>11.3 Respuesta a incidentes (IR)</h3>
+    <p>Ante incidentes:</p>
+    <p>Detección y análisis: delimitación, evidencias, impacto, sistemas afectados. </p>
+    <p>Contención: revocación de sesiones/tokens, bloqueo de cuentas, reglas adicionales, aislamiento. </p>
+    <p>Erradicación y recuperación: corrección raíz, hardening, restauración segura. </p>
+        <p>Notificación: cuando la ley o contrato lo exija, se notificará a afectados y/o autoridades. </p>
+    <p>Post-mortem: lecciones aprendidas y mejoras de controles/políticas. </p>
+    <p>Compromiso de tiempos (sin prometer lo imposible, pero sin quedar indefensa):</p>
+    <p>Talenorix buscará notificar incidentes confirmados con impacto material a datos personales sin demora indebida, y cuando aplique GDPR-like o exigencias contractuales, se orientará a un objetivo de notificación compatible (p. ej., 72 horas para autoridades cuando sea exigible), sujeto a confirmación del alcance y a requisitos legales aplicables.</p>
+    <h2>12. Copias de seguridad, continuidad y resiliencia</h2>
+        <p>Se realizan copias de seguridad periódicas de bases de datos y archivos críticos, almacenadas con acceso restringido. Existen procedimientos de restauración orientados a minimizar impacto y tiempo de recuperación. La continuidad se gestiona de forma proporcional a recursos, priorizando disponibilidad de autenticación, base de datos y almacenamiento.</p>
+    <h2>13. Gestión de proveedores y terceros (incluye IA)</h2>
+    <p>Talenorix puede apoyarse en proveedores para cloud, correo, analítica, verificación e IA. Esos proveedores deben cumplir obligaciones contractuales y solo tratar información bajo instrucciones de Talenorix y fines autorizados. La selección y revisión se hace considerando: nivel de seguridad, historial, controles disponibles, y localización de datos. </p>
+    <p>Cuando un proveedor sea crítico (p. ej. base de datos, autenticación, almacenamiento, proveedor IA que recibe PII), Talenorix documentará un análisis mínimo de riesgo y plan de mitigación.</p>
+    <h2>14. Seguridad física y dispositivos</h2>
+    <p>Talenorix opera mayormente en modalidad digital. Los dispositivos con acceso administrativo deben contar con autenticación robusta, bloqueo automático y protección razonable anti-malware.</p>
+    <p>Dirección física: por política de seguridad, la dirección física solo se comparte con empresas con contrato corporativo verificado, activo y vigente. </p>
+    <h2>15. Limitaciones y responsabilidad (riesgo residual)</h2>
+    <p>Talenorix adopta medidas razonables, pero ningún sistema es invulnerable. El usuario comprende que existe riesgo residual inherente a servicios online. Talenorix no será responsable por incidentes fuera de su control razonable, como credenciales compartidas por el usuario o tratamiento posterior por terceros de información que el usuario decidió compartir. </p>
+    <h2>16. Relación con otras políticas</h2>
+    <p>Esta Política se complementa con:</p>  
+    <ul>
+  <li>Política de Privacidad de Talenorix.</li>
+   <li>Términos y Condiciones de Uso.</li>
+   <li>Política de Cookies.</li>
+    </ul>
+    <p>En caso de discrepancia, prevalece la ley aplicable y luego los Términos y Condiciones.</p>
+    <p>17. Revisión y actualización</p>
+    <p>Esta Política se revisará periódicamente  si hay cambios relevantes (nuevos módulos, nuevos proveedores críticos, nuevas categorías de datos, cambios regulatorios) y se actualizará cuando sea necesario para reflejar cambios en las prácticas de seguridad, normativas o tecnologías. Las revisiones pueden incluir actualizaciones menores sin notificación explícita, o revisiones significativas que requieran notificación a los usuarios.</p>
+    <h2>18. Contacto y consultas</h2>
+    <p>Para consultas sobre esta Política o prácticas de seguridad, contactar a support@talenorix.com</p>
+       </div>
+
+
+   <!-- =========================================================
+     ANEXO a — POLÍTICA Y CONSENTIMIENTO DE PROCESAMIENTO DE DATOS
+     (Para insertar dentro de seguridad-informacion.html, dentro de <div class="legal-box">)
+========================================================= -->
+    <div class="legal-box">
+
+      <p><strong>ANEXO A - POLÍTICA DE RETENCIÓN Y ELIMINACIÓN DE DATOS</strong></p>
+      <p><strong>TALENORIX HIRING SOLUTIONS</strong></p>
+      <p><strong>Última actualización: 27 de diciembre de 2025</strong></p>
+
+      <h2>1. Objeto</h2>
+      <p>La presente Política de Retención y Eliminación de Datos (en adelante, la “Política”) establece los criterios, plazos y procedimientos aplicables a la conservación, bloqueo, anonimización y eliminación de los datos tratados por Talenorix Hiring Solutions (en adelante, “Talenorix” o la “Plataforma”).</p>
+      <p>Esta Política se adopta en cumplimiento de los principios de limitación del plazo de conservación, minimización de datos, seguridad, responsabilidad proactiva y cumplimiento normativo, conforme a la legislación aplicable en materia de protección de datos personales y a las buenas prácticas internacionales para plataformas tecnológicas bajo modalidad Software as a Service (SaaS).</p>
+      <p>Los datos personales tratados por Talenorix no serán conservados por un período superior al estrictamente necesario para cumplir con las finalidades para las cuales fueron recabados, salvo que exista una obligación legal o una causa legítima que justifique su conservación por un plazo mayor.</p>
+
+      <h2>2. Ámbito de aplicación</h2>
+      <p>La presente Política aplica a todos los datos tratados por Talenorix, independientemente de:</p>
+      <ul>
+        <li>la ubicación geográfica del usuario,</li>
+        <li>el tipo de usuario (candidato, empresa, reclutador, administrador u otro),</li>
+        <li>el formato del dato (digital, documental, técnico o estadístico),</li>
+        <li>el medio de tratamiento (plataforma, sistemas auxiliares, respaldos).</li>
+      </ul>
+      <p>Esta Política se aplica sin perjuicio de lo establecido en la Política de Privacidad, los Términos y Condiciones y demás documentos contractuales de la Plataforma, los cuales se interpretarán de forma armónica.</p>
+
+      <h2>3. Tipos de datos tratados</h2>
+      <p>Talenorix puede tratar, según el uso de la Plataforma y el rol del usuario, las siguientes categorías de datos:</p>
+      <ul>
+        <li>Datos de identificación y contacto de usuarios y representantes (nombre, correo electrónico, teléfono, identificadores de cuenta).</li>
+        <li>Datos de cuentas de empresas y usuarios internos.</li>
+        <li>Perfiles profesionales de candidatos, incluyendo currículos (CV), historial académico y laboral, habilidades, certificaciones y documentos asociados.</li>
+        <li>Información relacionada con vacantes laborales, postulaciones, evaluaciones, estados de procesos y comunicaciones vinculadas.</li>
+        <li>Mensajes y comunicaciones intercambiadas dentro de la Plataforma.</li>
+        <li>Archivos cargados por los usuarios (logotipos, documentos, imágenes, archivos adjuntos).</li>
+        <li>Registros técnicos, logs de acceso, métricas de uso, datos de seguridad y auditoría.</li>
+        <li>Información administrativa, contractual y de facturación, cuando corresponda.</li>
+      </ul>
+      <p>Talenorix no trata datos personales innecesarios, ni retiene información que no resulte pertinente para la finalidad del servicio.</p>
+
+      <h2>4. Criterios generales de retención</h2>
+      <p>Los datos serán conservados conforme a los siguientes criterios generales:</p>
+      <p>a) Necesidad operativa: mientras resulten necesarios para la prestación efectiva del servicio solicitado.</p>
+      <p>b) Relación contractual: durante la vigencia de la relación entre el usuario y Talenorix.</p>
+      <p>c) Cumplimiento legal: durante los plazos exigidos por leyes fiscales, laborales, comerciales o de protección de datos.</p>
+      <p>d) Defensa jurídica: cuando sea necesario para la formulación, ejercicio o defensa de reclamaciones.</p>
+      <p>e) Interés legítimo limitado: para fines estadísticos, analíticos o de mejora del servicio, siempre mediante anonimización.</p>
+      <p>Una vez desaparecida la finalidad que justifica el tratamiento, los datos serán eliminados, anonimizados o bloqueados, según corresponda.</p>
+
+      <h2>5. Plazos de conservación</h2>
+      <p>Salvo que una obligación legal imponga un plazo distinto, Talenorix aplica los siguientes plazos máximos de conservación:</p>
+
+      <h3>5.1 Datos de cuentas de usuario</h3>
+      <p>Mientras la cuenta permanezca activa: conservación íntegra.</p>
+      <p>Tras solicitud de cierre o eliminación: inicio del proceso de desactivación, bloqueo y eliminación conforme a esta Política.</p>
+
+      <h3>5.2 Datos de procesos de reclutamiento</h3>
+      <p>Vacantes cerradas y postulaciones asociadas: hasta 24 meses posteriores al cierre del proceso, para fines de trazabilidad operativa, soporte, auditoría y defensa ante posibles reclamaciones.</p>
+      <p>Cumplido el plazo, los datos podrán ser eliminados o anonimizados.</p>
+
+      <h3>5.3 Mensajes y comunicaciones internas</h3>
+      <p>Conservación máxima: 24 meses, salvo requerimiento legal distinto o necesidad documentada de defensa jurídica.</p>
+
+      <h3>5.4 Registros técnicos y logs</h3>
+      <p>Conservación máxima: 12 meses, con fines de seguridad, auditoría, investigación de incidentes y estabilidad del sistema.</p>
+
+      <h3>5.5 Información contractual y de facturación</h3>
+      <p>Conservación durante los plazos exigidos por la legislación fiscal, contable o contractual aplicable.</p>
+
+      <h2>6. Eliminación, anonimización y bloqueo de datos</h2>
+      <p>Talenorix podrá aplicar, según el caso:</p>
+      <p>Eliminación definitiva: borrado seguro de los sistemas activos dentro de un plazo no mayor a siete (7) días hábiles, salvo excepciones contempladas en esta Política.</p>
+      <p>Anonimización irreversible: de modo que el dato deje de ser identificable y no pueda asociarse a una persona.</p>
+      <p>Bloqueo de datos: cuando exista obligación legal de conservación o necesidad de defensa jurídica, impidiendo su uso activo y limitando el acceso a personal autorizado.</p>
+      <p>Las copias de seguridad (backups) se gestionan bajo medidas de seguridad razonables y se sobrescriben de forma periódica. Los datos eliminados de los sistemas activos pueden persistir temporalmente en respaldos técnicos, sin uso operativo, hasta su sustitución automática conforme al ciclo normal de rotación de respaldos.</p>
+
+      <h2>7. Eliminación a solicitud del usuario</h2>
+      <p>Los usuarios podrán solicitar la eliminación de sus datos personales mediante los canales oficiales habilitados por Talenorix.</p>
+      <p>Recibida la solicitud:</p>
+      <p>a) Talenorix verificará la identidad del solicitante.</p>
+      <p>b) Evaluará la procedencia conforme a la legislación aplicable.</p>
+      <p>c) Procederá a la eliminación, anonimización o bloqueo de los datos, salvo que exista una causa legal que lo impida.</p>
+      <p>El usuario recibirá un correo emitido por noreply@talenorix.com indicando que la eliminación en sistemas activos se ejecutará en un término no mayor a siete (7) días hábiles, sin perjuicio de la persistencia técnica temporal en respaldos conforme al ciclo de rotación automática.</p>
+      <p>En caso de denegación total o parcial, el usuario será informado del fundamento legal correspondiente.</p>
+
+      <h2>8. Excepciones legales</h2>
+      <p>Talenorix podrá conservar determinados datos cuando:</p>
+      <ul>
+        <li>Exista una obligación legal, fiscal, laboral o administrativa.</li>
+        <li>Los datos sean necesarios para la defensa ante reclamaciones.</li>
+        <li>Sean requeridos por autoridades judiciales o administrativas.</li>
+        <li>Deban conservarse para fines de cumplimiento normativo.</li>
+      </ul>
+      <p>En tales casos, los datos permanecerán bloqueados, sin uso operativo, hasta que cese la causa que justifica su conservación, momento en el cual se procederá a su eliminación definitiva o anonimización, según corresponda.</p>
+
+      <h2>9. Seguridad durante el ciclo de vida del dato</h2>
+      <p>Durante todo el ciclo de vida de los datos, Talenorix aplica medidas técnicas y organizativas razonables destinadas a proteger la información contra accesos no autorizados, pérdida, alteración o destrucción.</p>
+      <p>Estas medidas incluyen controles de acceso, cifrado, registros de auditoría, gestión de incidentes, políticas internas y procedimientos de respaldo y recuperación.</p>
+
+      <h2>10. Modificaciones de la Política</h2>
+      <p>Talenorix podrá actualizar la presente Política para reflejar cambios legales, técnicos u operativos.</p>
+      <p>La versión vigente será siempre la publicada en la Plataforma.</p>
+      <p>El uso continuado de la Plataforma tras la publicación de modificaciones implica la aceptación de la versión actualizada.</p>
+
+      <h2>11. Contacto</h2>
+      <p>Para consultas, solicitudes o ejercicio de derechos relacionados con la retención o eliminación de datos, los usuarios podrán contactar a Talenorix a través de los canales oficiales publicados en la Plataforma, incluyendo el correo: privacy@talenorix.com</p>
+
+    </div>
+
+        <div class="legal-box">
+<!-- =========================================================
+     ANEXO b — POLÍTICA Y CONSENTIMIENTO DE PROCESAMIENTO DE DATOS
+     (Para insertar dentro de seguridad-informacion.html, dentro de <div class="legal-box">)
+========================================================= -->
+
+<h2>ANEXO B — Política y Consentimiento de Procesamiento de Datos</h2>
+<p><strong>Talenorix Hiring Solutions</strong></p>
+<p><strong>Última actualización:</strong> 28 de diciembre de 2025</p>
+
+<p>
+La presente <strong>Política y Consentimiento de Procesamiento de Datos</strong> (en adelante, el “Anexo”) establece las reglas,
+bases legales y condiciones bajo las cuales <strong>Talenorix Hiring Solutions</strong> (en adelante, “Talenorix”, “la Plataforma” o “el Servicio”)
+recaba, usa, almacena, protege, comparte y elimina datos personales dentro del ciclo de vida del Servicio.
+</p>
+
+<p>
+Este Anexo forma parte integrante de la <strong>Política de Seguridad de la Información</strong> y se interpreta de forma conjunta con la
+<strong>Política de Privacidad</strong>, los <strong>Términos y Condiciones</strong>, la <strong>Política de Retención y Eliminación de Datos</strong> y las demás políticas vigentes publicadas por Talenorix.
+</p>
+
+<h3>A.1. Definiciones contractuales</h3>
+<ul>
+  <li><strong>Datos Personales:</strong> cualquier información que identifique o pueda identificar a una persona natural, de forma directa o indirecta.</li>
+  <li><strong>Tratamiento:</strong> cualquier operación sobre Datos Personales, incluyendo recopilación, registro, almacenamiento, acceso, uso, transmisión, supresión y anonimización.</li>
+  <li><strong>Usuario:</strong> toda persona que accede o utiliza el Servicio, incluyendo candidatos, empresas, reclutadores, administradores autorizados, invitados o visitantes.</li>
+  <li><strong>Cuenta:</strong> el acceso autenticado del Usuario a la Plataforma, incluyendo credenciales, sesiones, preferencias y configuración.</li>
+</ul>
+
+<h3>A.2. Responsable del tratamiento y rol operativo</h3>
+<p>
+Para efectos operativos, <strong>Talenorix</strong> actúa como responsable del tratamiento de los datos personales que procesa para operar y asegurar la Plataforma
+(autenticación, seguridad, soporte, analítica técnica, prevención de fraude y continuidad).
+</p>
+<p>
+En el marco del funcionamiento del Servicio, una <strong>Empresa</strong> puede actuar como responsable respecto a la información que publica o utiliza sobre
+vacantes, procesos y decisiones de contratación; y <strong>Talenorix</strong> puede actuar como proveedor tecnológico que facilita el tratamiento conforme a la finalidad del Servicio,
+sin asumir control editorial sobre el contenido del Usuario.
+</p>
+
+<h3>A.3. Principios rectores del tratamiento</h3>
+<p>
+Talenorix aplica principios de minimización, confidencialidad, necesidad operativa, seguridad proporcional al riesgo, limitación del plazo de conservación
+y responsabilidad proactiva. Se evita tratar información que no sea pertinente para el propósito legítimo del Servicio.
+</p>
+
+<h3>A.4. Finalidades del procesamiento</h3>
+<p>Talenorix podrá procesar Datos Personales para las siguientes finalidades (según rol y uso de la Plataforma):</p>
+<ul>
+  <li><strong>Autenticación y gestión de cuenta:</strong> registro, inicio de sesión, control de sesiones, recuperación de cuenta, verificación técnica y seguridad de acceso.</li>
+  <li><strong>Prestación del Servicio:</strong> creación de perfiles, publicación de vacantes, postulaciones, evaluaciones, comunicaciones internas y gestión operativa de procesos.</li>
+  <li><strong>Soporte y atención:</strong> respuesta a solicitudes, incidentes, reclamos, validaciones razonables de identidad y acompañamiento técnico.</li>
+  <li><strong>Seguridad y prevención de abuso:</strong> detección y mitigación de fraude, accesos no autorizados, malware, scraping no autorizado, abuso de mensajería y conductas prohibidas.</li>
+  <li><strong>Auditoría y trazabilidad:</strong> registros de acciones relevantes para cumplimiento, integridad del sistema y defensa ante reclamaciones legítimas.</li>
+  <li><strong>Mejora del Servicio:</strong> análisis interno de rendimiento, estabilidad y calidad mediante métricas agregadas y, cuando corresponda, datos anonimizados.</li>
+  <li><strong>Cumplimiento legal:</strong> atención de requerimientos válidos de autoridades y cumplimiento de obligaciones aplicables.</li>
+</ul>
+
+<h3>A.5. Base legal del tratamiento</h3>
+<p>
+El tratamiento de datos por Talenorix se sustenta en una o más de las siguientes bases, según corresponda:
+</p>
+<ul>
+  <li><strong>Ejecución contractual:</strong> cuando el tratamiento sea necesario para proveer funcionalidades esenciales del Servicio.</li>
+  <li><strong>Consentimiento:</strong> cuando sea requerido por la ley aplicable (por ejemplo, ciertos usos no esenciales o preferencias específicas).</li>
+  <li><strong>Interés legítimo:</strong> para seguridad, prevención de fraude, estabilidad, auditoría y mejora razonable del Servicio, siempre de forma proporcional.</li>
+  <li><strong>Obligación legal:</strong> cuando exista deber legal de conservar o divulgar información conforme a normativa aplicable.</li>
+</ul>
+
+<h3>A.6. Consentimiento del Usuario (aceptación expresa)</h3>
+<p>
+Al registrarse, crear una cuenta, utilizar funcionalidades del Servicio o cargar información en la Plataforma, el Usuario manifiesta su aceptación expresa e informada
+de que Talenorix trate sus Datos Personales conforme a las finalidades descritas en este Anexo, la Política de Privacidad y los Términos y Condiciones.
+</p>
+
+<p>
+Cuando el Servicio requiera una manifestación adicional de consentimiento (por ejemplo, un checkbox de aceptación en formularios),
+la acción afirmativa del Usuario se considerará <strong>consentimiento válido</strong> en la medida exigida por la legislación aplicable.
+</p>
+
+<p>
+El Usuario reconoce que:
+</p>
+<ul>
+  <li>Los datos provistos deben ser <strong>veraces</strong> en sus elementos esenciales.</li>
+  <li>El Usuario es responsable de <strong>no cargar datos innecesarios</strong>, ni información de terceros sin autorización o base legal.</li>
+  <li>El Usuario puede <strong>actualizar</strong> su información dentro de la Plataforma, según las funcionalidades disponibles.</li>
+</ul>
+
+<h3>A.7. Retiro del consentimiento y efectos operativos</h3>
+<p>
+Cuando el tratamiento se base en consentimiento, el Usuario podrá retirarlo en cualquier momento mediante los canales oficiales publicados por Talenorix.
+El retiro no afecta la legalidad del tratamiento realizado antes de su retiro.
+</p>
+
+<p>
+El Usuario comprende que el retiro de consentimiento o la solicitud de eliminación de datos puede:
+</p>
+<ul>
+  <li>Limitar o impedir el uso de ciertas funcionalidades del Servicio.</li>
+  <li>Requerir el cierre o desactivación de la cuenta cuando el tratamiento sea imprescindible para operar el Servicio.</li>
+  <li>Estar sujeto a retención, bloqueo o conservación por obligación legal o defensa jurídica, conforme a la Política de Retención y Eliminación de Datos.</li>
+</ul>
+
+<h3>A.8. Categorías de datos y restricciones especiales</h3>
+<p>
+Talenorix puede procesar, según el rol y uso del Servicio, datos de identificación y contacto, información de perfiles, historial profesional,
+documentos adjuntos, mensajes, y registros técnicos de seguridad y auditoría.
+</p>
+
+<p>
+El Usuario se obliga a <strong>no cargar</strong> información sensible innecesaria (por ejemplo, datos de salud, biométricos, menores, orientación sexual, afiliación sindical,
+origen étnico, ideología o datos financieros delicados), salvo que sea estrictamente indispensable, legalmente permitido y cuente con base legal suficiente.
+</p>
+
+<h3>A.9. Compartición de datos y destinatarios</h3>
+<p>
+Dentro del funcionamiento normal del Servicio, los datos podrán ser visibles o compartidos con:
+</p>
+<ul>
+  <li><strong>Empresas</strong> y usuarios autorizados en procesos de reclutamiento, cuando el Usuario (candidato) aplique, responda o habilite acceso conforme al Servicio.</li>
+  <li><strong>Proveedores tecnológicos</strong> necesarios para operar la Plataforma (por ejemplo: hosting, base de datos, almacenamiento, correo transaccional),
+    quienes tratarán datos bajo instrucciones y fines autorizados, con medidas razonables de seguridad.</li>
+  <li><strong>Autoridades competentes</strong>, cuando exista requerimiento legal válido o sea necesario para el cumplimiento normativo.</li>
+</ul>
+
+<p>
+Talenorix no vende datos personales. Cualquier transferencia adicional no compatible con el Servicio requerirá base legal y, cuando corresponda, consentimiento.
+</p>
+
+<h3>A.10. Transferencias internacionales</h3>
+<p>
+Dado el carácter global del Servicio y el uso de infraestructura tecnológica, los datos pueden ser tratados o almacenados en jurisdicciones distintas
+a la del Usuario. Talenorix aplicará medidas razonables para asegurar que el tratamiento mantenga un nivel adecuado de protección,
+conforme a la ley aplicable y a sus controles de seguridad.
+</p>
+
+<h3>A.11. Seguridad aplicada al procesamiento</h3>
+<p>
+Talenorix aplica medidas técnicas y organizativas razonables para proteger los datos contra acceso no autorizado, pérdida, alteración o destrucción.
+Estas medidas incluyen, de forma proporcional al riesgo: controles de acceso, segregación de permisos, cifrado en tránsito cuando corresponda,
+monitoreo de actividad, registros de auditoría, procedimientos de incidentes y respaldos periódicos.
+</p>
+
+<p>
+El Usuario también es responsable de proteger sus credenciales, mantener contraseñas robustas, no compartir accesos y reportar incidentes sospechosos.
+</p>
+
+<h3>A.12. Conservación, bloqueo y eliminación</h3>
+<p>
+Los datos se conservan solo por el tiempo necesario para cumplir finalidades legítimas del Servicio, y se eliminan, anonimizan o bloquean según corresponda,
+conforme a la <strong>Política de Retención y Eliminación de Datos</strong> incluida en este documento y las obligaciones legales aplicables.
+</p>
+
+<h3>A.13. Canales de contacto</h3>
+<p>
+Para consultas, solicitudes o ejercicio de derechos relacionados con el procesamiento de datos, el Usuario podrá contactar a:
+</p>
+<ul>
+  <li><strong>privacy@talenorix.com</strong></li>
+  <li><strong>support@talenorix.com</strong> (soporte operativo y reportes)</li>
+</ul>
+
+<!-- =========================================================
+     FIN ANEXO b
+========================================================= -->
+</div>
+  </main>
+
+
+</body>
+</html>
