@@ -163,24 +163,6 @@
       </section>
     </main>
 
-    <!-- Footer injection -->
-    <div id="footer-placeholder"></div>
-<script defer>
-(async function () {
-  try {
-    const footerHost = document.getElementById("footer-placeholder");
-    if (!footerHost) return;
-
-    const res = await fetch("/web/web-footer.html", { cache: "no-store" });
-    const html = await res.text();
-    footerHost.innerHTML = html;
-  } catch (e) {
-    console.error("[Footer Inject] Error:", e);
-  }
-})();
-</script>
-
-
     <script defer src="./web/js/main.js"></script>
 
   </body>
