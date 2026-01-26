@@ -5,8 +5,12 @@ Allow: /
 User-agent: OAI-SearchBot
 Allow: /
 
-User-agent: GPTBot
+User-agent: *
+Disallow: /web/dashboard/
+Disallow: /web/admin/
+
 Allow: /
 
-# Sitemap
 Sitemap: https://talenorix.com/sitemap.xml
+
+
